@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Entitades
 {
-    public class Usuario : Empleado
+    public class Usuario 
     {
         public String NombreUser { get; set; }  
         public String Contraseña { get; set; }

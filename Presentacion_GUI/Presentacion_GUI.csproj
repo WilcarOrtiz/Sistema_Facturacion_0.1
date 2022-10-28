@@ -52,6 +52,12 @@
     <Compile Include="FrmAdmin.Designer.cs">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAdmin1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAdmin1.Designer.cs">
+      <DependentUpon>FrmAdmin1.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmProductosEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAdmin1.resx">
+      <DependentUpon>FrmAdmin1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmProductosEdit.resx">
       <DependentUpon>FrmProductosEdit.cs</DependentUpon>
