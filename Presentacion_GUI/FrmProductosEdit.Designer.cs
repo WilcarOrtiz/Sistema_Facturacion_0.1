@@ -36,17 +36,17 @@
             this.label15 = new System.Windows.Forms.Label();
             this.cmbUnidadesEdit = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.BtnGuardarEdit = new System.Windows.Forms.PictureBox();
             this.CantidadEdit = new System.Windows.Forms.NumericUpDown();
             this.textCodigoEditar = new System.Windows.Forms.TextBox();
             this.txtPrecioVEdit = new System.Windows.Forms.TextBox();
             this.txtPrecioCEdit = new System.Windows.Forms.TextBox();
             this.txtNombreProducEditar = new System.Windows.Forms.TextBox();
             this.txtDescripEditar = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnGuardarEdit)).BeginInit();
+            this.BtnGuardarEdit = new System.Windows.Forms.PictureBox();
+            this.BtnCancelarEdit = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadEdit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnGuardarEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnCancelarEdit)).BeginInit();
             this.SuspendLayout();
             // 
             // label10
@@ -127,15 +127,6 @@
             this.label16.TabIndex = 50;
             this.label16.Text = "Cantidad";
             // 
-            // BtnGuardarEdit
-            // 
-            this.BtnGuardarEdit.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BtnGuardarEdit.Location = new System.Drawing.Point(47, 308);
-            this.BtnGuardarEdit.Name = "BtnGuardarEdit";
-            this.BtnGuardarEdit.Size = new System.Drawing.Size(100, 50);
-            this.BtnGuardarEdit.TabIndex = 52;
-            this.BtnGuardarEdit.TabStop = false;
-            // 
             // CantidadEdit
             // 
             this.CantidadEdit.Location = new System.Drawing.Point(193, 259);
@@ -183,24 +174,34 @@
             this.txtDescripEditar.Size = new System.Drawing.Size(205, 35);
             this.txtDescripEditar.TabIndex = 39;
             // 
-            // pictureBox1
+            // BtnGuardarEdit
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.pictureBox1.Location = new System.Drawing.Point(172, 308);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 54;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.BtnGuardarEdit.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BtnGuardarEdit.Location = new System.Drawing.Point(47, 308);
+            this.BtnGuardarEdit.Name = "BtnGuardarEdit";
+            this.BtnGuardarEdit.Size = new System.Drawing.Size(79, 50);
+            this.BtnGuardarEdit.TabIndex = 55;
+            this.BtnGuardarEdit.TabStop = false;
+            this.BtnGuardarEdit.Click += new System.EventHandler(this.BtnGuardarEdit_Click);
+            // 
+            // BtnCancelarEdit
+            // 
+            this.BtnCancelarEdit.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.BtnCancelarEdit.Location = new System.Drawing.Point(171, 308);
+            this.BtnCancelarEdit.Name = "BtnCancelarEdit";
+            this.BtnCancelarEdit.Size = new System.Drawing.Size(100, 50);
+            this.BtnCancelarEdit.TabIndex = 56;
+            this.BtnCancelarEdit.TabStop = false;
+            this.BtnCancelarEdit.Click += new System.EventHandler(this.BtnCancelarEdit_Click);
             // 
             // FrmProductosEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(310, 403);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textCodigoEditar);
+            this.Controls.Add(this.BtnCancelarEdit);
             this.Controls.Add(this.BtnGuardarEdit);
+            this.Controls.Add(this.textCodigoEditar);
             this.Controls.Add(this.CantidadEdit);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label10);
@@ -216,9 +217,9 @@
             this.Controls.Add(this.cmbUnidadesEdit);
             this.Name = "FrmProductosEdit";
             this.Text = "FrmProductosEdit";
-            ((System.ComponentModel.ISupportInitialize)(this.BtnGuardarEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadEdit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnGuardarEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnCancelarEdit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,13 +235,13 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox cmbUnidadesEdit;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.PictureBox BtnGuardarEdit;
         private System.Windows.Forms.NumericUpDown CantidadEdit;
         private System.Windows.Forms.TextBox textCodigoEditar;
         private System.Windows.Forms.TextBox txtPrecioVEdit;
         private System.Windows.Forms.TextBox txtPrecioCEdit;
         private System.Windows.Forms.TextBox txtNombreProducEditar;
         private System.Windows.Forms.TextBox txtDescripEditar;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox BtnGuardarEdit;
+        private System.Windows.Forms.PictureBox BtnCancelarEdit;
     }
 }

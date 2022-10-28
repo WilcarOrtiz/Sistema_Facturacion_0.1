@@ -82,7 +82,14 @@
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column15 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.cmbTipoBusqueda = new System.Windows.Forms.ComboBox();
+            this.textBusqueda = new System.Windows.Forms.TextBox();
+            this.BtnBuscar = new System.Windows.Forms.PictureBox();
+            this.BtnBorrar = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tbPersonal.SuspendLayout();
             this.gbLista.SuspendLayout();
@@ -99,6 +106,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.GrillaProductos)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrillaCatalogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnBuscar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnBorrar)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -106,13 +116,13 @@
             this.tabControl1.Controls.Add(this.tbPersonal);
             this.tabControl1.Controls.Add(this.tbProductos);
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(7, 8);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(739, 488);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.Click += new System.EventHandler(this.tabControl1_Click);
             // 
             // tbPersonal
             // 
@@ -564,6 +574,14 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label12);
+            this.tabPage1.Controls.Add(this.label11);
+            this.tabPage1.Controls.Add(this.BtnBorrar);
+            this.tabPage1.Controls.Add(this.BtnBuscar);
+            this.tabPage1.Controls.Add(this.textBusqueda);
+            this.tabPage1.Controls.Add(this.cmbTipoBusqueda);
+            this.tabPage1.Controls.Add(this.label10);
+            this.tabPage1.Controls.Add(this.pictureBox3);
             this.tabPage1.Controls.Add(this.GrillaCatalogo);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -572,6 +590,7 @@
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // GrillaCatalogo
             // 
@@ -585,9 +604,9 @@
             this.Column13,
             this.Eliminar,
             this.Column15});
-            this.GrillaCatalogo.Location = new System.Drawing.Point(6, 78);
+            this.GrillaCatalogo.Location = new System.Drawing.Point(6, 88);
             this.GrillaCatalogo.Name = "GrillaCatalogo";
-            this.GrillaCatalogo.Size = new System.Drawing.Size(717, 378);
+            this.GrillaCatalogo.Size = new System.Drawing.Size(717, 357);
             this.GrillaCatalogo.TabIndex = 0;
             this.GrillaCatalogo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GrillaCatalogo_CellClick);
             // 
@@ -638,15 +657,78 @@
             this.Column15.HeaderText = "Editar";
             this.Column15.Name = "Column15";
             // 
-            // tabPage2
+            // pictureBox3
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(731, 462);
-            this.tabPage2.TabIndex = 3;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.pictureBox3.Location = new System.Drawing.Point(10, 54);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(51, 23);
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(322, 64);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(58, 13);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Buscar por";
+            // 
+            // cmbTipoBusqueda
+            // 
+            this.cmbTipoBusqueda.FormattingEnabled = true;
+            this.cmbTipoBusqueda.Items.AddRange(new object[] {
+            "Codigo",
+            "Nombre"});
+            this.cmbTipoBusqueda.Location = new System.Drawing.Point(386, 54);
+            this.cmbTipoBusqueda.Name = "cmbTipoBusqueda";
+            this.cmbTipoBusqueda.Size = new System.Drawing.Size(79, 21);
+            this.cmbTipoBusqueda.TabIndex = 3;
+            // 
+            // textBusqueda
+            // 
+            this.textBusqueda.Location = new System.Drawing.Point(471, 54);
+            this.textBusqueda.Name = "textBusqueda";
+            this.textBusqueda.Size = new System.Drawing.Size(177, 20);
+            this.textBusqueda.TabIndex = 4;
+            this.textBusqueda.TextChanged += new System.EventHandler(this.textBusqueda_TextChanged);
+            // 
+            // BtnBuscar
+            // 
+            this.BtnBuscar.BackColor = System.Drawing.Color.LightGray;
+            this.BtnBuscar.Location = new System.Drawing.Point(654, 53);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(29, 21);
+            this.BtnBuscar.TabIndex = 5;
+            this.BtnBuscar.TabStop = false;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
+            // 
+            // BtnBorrar
+            // 
+            this.BtnBorrar.BackColor = System.Drawing.Color.DarkGray;
+            this.BtnBorrar.Location = new System.Drawing.Point(690, 53);
+            this.BtnBorrar.Name = "BtnBorrar";
+            this.BtnBorrar.Size = new System.Drawing.Size(29, 21);
+            this.BtnBorrar.TabIndex = 6;
+            this.BtnBorrar.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(648, 28);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(14, 13);
+            this.label11.TabIndex = 7;
+            this.label11.Text = "B";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(674, 28);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(20, 13);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "Bo";
             // 
             // FrmAdmin
             // 
@@ -677,7 +759,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GrillaProductos)).EndInit();
             this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrillaCatalogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnBuscar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnBorrar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -737,6 +823,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
         private System.Windows.Forms.DataGridViewButtonColumn Column15;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.PictureBox BtnBorrar;
+        private System.Windows.Forms.PictureBox BtnBuscar;
+        private System.Windows.Forms.TextBox textBusqueda;
+        private System.Windows.Forms.ComboBox cmbTipoBusqueda;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
     }
 }

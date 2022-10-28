@@ -42,6 +42,7 @@ namespace Presentacion_GUI
         }
         void CapturarActualizacion()
         {
+            MessageBox.Show(textCodigoEditar.Text);
             String Cod = FuncionesProductos.ArticuloXId(Id);
             Producto Articulo = FuncionesProductos.ObtenerPorCodigo(Cod);
             String IdEdit = FuncionesProductos.IdXArticulo(textCodigoEditar.Text);
@@ -69,13 +70,11 @@ namespace Presentacion_GUI
         }
         private void BtnGuardarEdit_Click(object sender, EventArgs e)
         {
-            if (!vacio())
-            {
-                CapturarActualizacion(); 
-                this.Close();
-            }
+            CapturarActualizacion();
+            this.Close(); 
         }
-        private void pictureBox1_Click(object sender, EventArgs e)
+
+        private void BtnCancelarEdit_Click(object sender, EventArgs e)
         {
             this.Close(); 
         }
