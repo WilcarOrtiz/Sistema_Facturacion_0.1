@@ -17,7 +17,6 @@ namespace Entitades
         public int Cantidad { get; set; }
         public float PrecioC { get; set; }
         public float PrecioV { get; set; }
-
         public Producto(String ID,String Codigo, String NombreProducto, String Descripcion, String Unidad, int Cantidad, float PrecioC, float PrecioV)
         {
             this.ID = ID; 
@@ -29,12 +28,10 @@ namespace Entitades
             this.PrecioC = PrecioC; 
             this.PrecioV = PrecioV;
         }
-
         public Producto()
         {
 
         }
-
         public override string ToString()
         {
             return ID + ";" + Codigo + ";" + NombreProducto + ";" + Descripcion + ";" + Cantidad + ";" + Unidad + ";" + PrecioC + ";" + PrecioV;

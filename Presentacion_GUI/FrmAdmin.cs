@@ -507,7 +507,6 @@ namespace Presentacion_GUI
                 CargarGrillaCatalogo();
 
             }
-
             if (this.GrillaCatalogo.Columns[e.ColumnIndex].Index == 7)
             {
                 VistaParaProductos(funcionesProductos.GetAllProductos()[e.RowIndex]);
@@ -515,7 +514,6 @@ namespace Presentacion_GUI
             }
 
         }
-
        public struct Datos
         {
             public string Codigo;
