@@ -14,7 +14,6 @@ namespace Datos
         {
                 
         }
-
         public List<Usuario>GetAll()
         {
             StreamReader sr = new StreamReader(ruta);
