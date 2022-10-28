@@ -10,6 +10,12 @@ namespace Entitades
     public class Usuario : Empleado
     {
         public String NombreUser { get; set; }  
-        public String Contraseña { get; set; }  
+        public String Contraseña { get; set; }
+
+
+        public override string ToString()
+        {
+            return NombreUser+";"+Contraseña ;
+        }
     }
 }

@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace Datos
 {
-    public class Archivos
+    public class ArchivosProductos
     {
         protected String ruta;
 
-        public Archivos()
+        public ArchivosProductos()
         {
             ruta = "Producto.txt";
         }
-        public Archivos(string FileName)
+        public ArchivosProductos(string FileName)
         {
             ruta = FileName;
         }
