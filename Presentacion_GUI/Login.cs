@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Logica;
 
 namespace Presentacion_GUI
 {
     public partial class Login : Form
     {
+        FuncionesUsuario funcionesUsuario = new FuncionesUsuario();   
         public Login()
         {
             InitializeComponent();
@@ -99,6 +101,16 @@ namespace Presentacion_GUI
             }
             else
             {
+                String Usuario = txtUsuario.Text;
+                String Contraseña = txtContraseña.Text;
+                if (funcionesUsuario.Login(Usuario, Contraseña)==true)
+                {
+                    MessageBox.Show("Entro");
+                }
+                else
+                {
+                    MessageBox.Show("No entro");
+                }
                 
             }
         }

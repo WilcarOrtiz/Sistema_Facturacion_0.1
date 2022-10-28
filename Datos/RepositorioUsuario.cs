@@ -30,8 +30,8 @@ namespace Datos
         Entitades.Usuario Mappear(String linea)
         {
             var Usuarios = new Entitades.Usuario();
-            Usuarios.NombreUser = linea;
-            Usuarios.Contraseña = linea;
+            Usuarios.NombreUser = linea.Split(';')[0] ;
+            Usuarios.Contraseña = linea.Split(';')[1];
             return Usuarios;
         }
     }
