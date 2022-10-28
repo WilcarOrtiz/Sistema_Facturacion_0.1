@@ -16,6 +16,7 @@ namespace Presentacion_GUI
 
         Logica.FuncionesProductos funcionesProductos = new Logica.FuncionesProductos();
         int fila;
+        DataTable Tabla;
         public FrmAdmin()
         {
             InitializeComponent();
@@ -144,7 +145,10 @@ namespace Presentacion_GUI
             Seleccion();
             Seleccion2();
             CargarGrillaProductos();
-            CargarGrillaCatalogo();
+            // CargarGrillaCatalogo();
+            //  CargarTabla();
+            CargarTabla();
+            DeclaracionTabla();
         }
 
         public void Restablecer()
@@ -500,17 +504,18 @@ namespace Presentacion_GUI
         public void GrillaCatalogo_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             fila = e.RowIndex;
-            if (this.GrillaCatalogo.Columns[e.ColumnIndex].Index == 6)
+            if (this.GrillaCatalogo.Columns[e.ColumnIndex].Index == 0)
             {
                 String Codigo = GrillaCatalogo.Rows[fila].Cells[0].Value.ToString();
                 MessageBox.Show(funcionesProductos.EliminarProducto(funcionesProductos.ObtenerPorCodigo(Codigo)));
                 CargarGrillaCatalogo();
 
             }
-            if (this.GrillaCatalogo.Columns[e.ColumnIndex].Index == 7)
+            if (this.GrillaCatalogo.Columns[e.ColumnIndex].Index == 1)
             {
                 VistaParaProductos(funcionesProductos.GetAllProductos()[e.RowIndex]);
-                CargarGrillaCatalogo();
+                CargarTabla();
+                //CargarGrillaCatalogo();
             }
 
         }
@@ -541,54 +546,53 @@ namespace Presentacion_GUI
             FPE.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+
+        void DeclaracionTabla()
         {
+            //Tabla = new DataTable();
+            //Tabla.Columns.Add("Codigo");
+            //Tabla.Columns.Add("Nombre");
+            //Tabla.Columns.Add("Cantidad");
+            //Tabla.Columns.Add("Unidad");
+            //Tabla.Columns.Add("$ Compra");
+            //Tabla.Columns.Add("$ Venta");
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
+
+
+
+        void CargarTabla()
         {
-
-        }
-
-    
-
-
-        private void tabControl1_Click(object sender, EventArgs e)
-        {
-
+            Tabla = new DataTable();
+            Tabla.Columns.Add("Codigo");
+            Tabla.Columns.Add("Nombre");
+            Tabla.Columns.Add("Cantidad");
+            Tabla.Columns.Add("Unidad");
+            Tabla.Columns.Add("$ Compra");
+            Tabla.Columns.Add("$ Venta");
+            foreach (var item in funcionesProductos.GetAllProductos())
+            {
+                Tabla.Rows.Add(item.Codigo, item.NombreProducto, item.Cantidad, item.Unidad, item.PrecioC, item.PrecioV);
+            }
+            GrillaCatalogo.DataSource = Tabla;
         }
 
         private void textBusqueda_TextChanged(object sender, EventArgs e)
         {
-            GrillaCatalogo.CurrentCell = null;
-            if (textBusqueda.Text == "")
+            DataView Dv = Tabla.DefaultView;
+            switch (cmbTipoBusqueda.Text)
             {
-                foreach (DataGridViewRow GC in GrillaCatalogo.Rows)
-                {
-                    GC.Visible = false;
-                }
-                foreach (DataGridViewRow GC in GrillaCatalogo.Rows)
-                {
-                    foreach (DataGridViewCell c in GC.Cells)
-                    {
-                        if ((c.Value.ToString().ToUpper()).IndexOf(textBusqueda.Text.ToUpper()) == 0)
-                        {
-                            GC.Visible = true;
-                            break;
-                        }
+                case "Codigo":
+                    Dv.RowFilter = " Codigo LIKE '" + textBusqueda.Text + "%'";
+                    GrillaCatalogo.DataSource = Dv;
+                    break;
 
-                    }
-                }
+                case "Nombre":
+                    Dv.RowFilter = " Nombre  LIKE '" + textBusqueda.Text + "%'";
+                    GrillaCatalogo.DataSource = Dv;
+                    break;
             }
-            else
-            {
-                CargarGrillaCatalogo();
-            }
-
-        }
-
-        private void BtnBuscar_Click(object sender, EventArgs e)
-        {
         }
     }
 }

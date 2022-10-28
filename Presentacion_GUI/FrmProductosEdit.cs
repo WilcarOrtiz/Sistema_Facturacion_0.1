@@ -27,9 +27,8 @@ namespace Presentacion_GUI
             textCodigoEditar.Text = informacion.Codigo;
             txtPrecioCEdit.Text = informacion.PrecioC.ToString();
             txtPrecioVEdit.Text = informacion.PrecioV.ToString();
-            CantidadEdit.Value = informacion.Cantidad;
             CantidadI = informacion.Cantidad;
-
+            CantidadInicial.Text = CantidadI.ToString();
         }
         public Boolean vacio()
         {
@@ -46,7 +45,7 @@ namespace Presentacion_GUI
             String Cod = FuncionesProductos.ArticuloXId(Id);
             Producto Articulo = FuncionesProductos.ObtenerPorCodigo(Cod);
             String IdEdit = FuncionesProductos.IdXArticulo(textCodigoEditar.Text);
-            if ((Id == IdEdit) || (FuncionesProductos.ObtenerPorCodigo(Cod) == null))
+            if ((Id == IdEdit) || (FuncionesProductos.ObtenerPorCodigo(textCodigoEditar.Text) == null))
             {
                 MessageBox.Show(FuncionesProductos.Editar(Id, textCodigoEditar.Text, txtNombreProducEditar.Text,
                     txtDescripEditar.Text, cmbUnidadesEdit.Text, ((int)CantidadEdit.Value + CantidadI),
