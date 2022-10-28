@@ -19,7 +19,9 @@ namespace Logica
             products = new List<Producto>();
             products = RepositorioProductos.GetAll();
         }
-        //Esto add a product.
+
+        //Esto es para agregar producto 
+
         public string AgregarProducto(Producto Articulo)
         {
             String Mensaje;

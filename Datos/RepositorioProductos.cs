@@ -32,13 +32,14 @@ namespace Datos
         Entitades.Producto Mappear(String linea)
         {
             var Articulo = new Entitades.Producto();
-            Articulo.Codigo = linea.Split(';')[0];
-            Articulo.NombreProducto = linea.Split(';')[1];
-            Articulo.Descripcion = linea.Split(';')[2];
-            Articulo.Cantidad = int.Parse(linea.Split(';')[3]);
-            Articulo.Unidad = linea.Split(';')[4];
-            Articulo.PrecioC = float.Parse(linea.Split(';')[5]);
-            Articulo.PrecioV = float.Parse(linea.Split(';')[6]);
+            Articulo.ID = linea.Split(';')[0];
+            Articulo.Codigo = linea.Split(';')[1];
+            Articulo.NombreProducto = linea.Split(';')[2];
+            Articulo.Descripcion = linea.Split(';')[3];
+            Articulo.Cantidad = int.Parse(linea.Split(';')[4]);
+            Articulo.Unidad = linea.Split(';')[5];
+            Articulo.PrecioC = float.Parse(linea.Split(';')[6]);
+            Articulo.PrecioV = float.Parse(linea.Split(';')[7]);
             return Articulo;
         }
 
