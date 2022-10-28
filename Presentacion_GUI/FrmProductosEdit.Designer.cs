@@ -44,6 +44,8 @@
             this.txtDescripEditar = new System.Windows.Forms.TextBox();
             this.BtnGuardarEdit = new System.Windows.Forms.PictureBox();
             this.BtnCancelarEdit = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.CantidadInicial = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnGuardarEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCancelarEdit)).BeginInit();
@@ -121,15 +123,15 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(44, 266);
+            this.label16.Location = new System.Drawing.Point(41, 300);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(49, 13);
+            this.label16.Size = new System.Drawing.Size(109, 13);
             this.label16.TabIndex = 50;
-            this.label16.Text = "Cantidad";
+            this.label16.Text = "Cantidad en bodega: ";
             // 
             // CantidadEdit
             // 
-            this.CantidadEdit.Location = new System.Drawing.Point(193, 259);
+            this.CantidadEdit.Location = new System.Drawing.Point(172, 266);
             this.CantidadEdit.Name = "CantidadEdit";
             this.CantidadEdit.Size = new System.Drawing.Size(59, 20);
             this.CantidadEdit.TabIndex = 51;
@@ -177,7 +179,7 @@
             // BtnGuardarEdit
             // 
             this.BtnGuardarEdit.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BtnGuardarEdit.Location = new System.Drawing.Point(47, 308);
+            this.BtnGuardarEdit.Location = new System.Drawing.Point(46, 364);
             this.BtnGuardarEdit.Name = "BtnGuardarEdit";
             this.BtnGuardarEdit.Size = new System.Drawing.Size(79, 50);
             this.BtnGuardarEdit.TabIndex = 55;
@@ -187,18 +189,37 @@
             // BtnCancelarEdit
             // 
             this.BtnCancelarEdit.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.BtnCancelarEdit.Location = new System.Drawing.Point(171, 308);
+            this.BtnCancelarEdit.Location = new System.Drawing.Point(172, 364);
             this.BtnCancelarEdit.Name = "BtnCancelarEdit";
             this.BtnCancelarEdit.Size = new System.Drawing.Size(100, 50);
             this.BtnCancelarEdit.TabIndex = 56;
             this.BtnCancelarEdit.TabStop = false;
             this.BtnCancelarEdit.Click += new System.EventHandler(this.BtnCancelarEdit_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(43, 268);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(107, 13);
+            this.label1.TabIndex = 57;
+            this.label1.Text = "Cantidad a adicionar:";
+            // 
+            // CantidadInicial
+            // 
+            this.CantidadInicial.AutoSize = true;
+            this.CantidadInicial.Location = new System.Drawing.Point(169, 300);
+            this.CantidadInicial.Name = "CantidadInicial";
+            this.CantidadInicial.Size = new System.Drawing.Size(0, 13);
+            this.CantidadInicial.TabIndex = 58;
+            // 
             // FrmProductosEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(310, 403);
+            this.ClientSize = new System.Drawing.Size(310, 459);
+            this.Controls.Add(this.CantidadInicial);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnCancelarEdit);
             this.Controls.Add(this.BtnGuardarEdit);
             this.Controls.Add(this.textCodigoEditar);
@@ -243,5 +264,7 @@
         private System.Windows.Forms.TextBox txtDescripEditar;
         private System.Windows.Forms.PictureBox BtnGuardarEdit;
         private System.Windows.Forms.PictureBox BtnCancelarEdit;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label CantidadInicial;
     }
 }
