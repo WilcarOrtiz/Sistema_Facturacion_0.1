@@ -514,7 +514,7 @@ namespace Presentacion_GUI
             }
 
         }
-       public struct Datos
+        public struct Datos
         {
             public string Codigo;
             public string ID;
@@ -527,7 +527,7 @@ namespace Presentacion_GUI
         }
         void VistaParaProductos(Entitades.Producto Articulo)
         {
-            MessageBox.Show(Articulo.NombreProducto); 
+            MessageBox.Show(Articulo.NombreProducto);
             Datos informacion;
             informacion.ID = Articulo.ID;
             informacion.Codigo = Articulo.Codigo;
@@ -542,6 +542,52 @@ namespace Presentacion_GUI
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+    
+
+
+        private void tabControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            GrillaCatalogo.CurrentCell = null;
+            if (textBusqueda.Text == "")
+            {
+                foreach (DataGridViewRow GC in GrillaCatalogo.Rows)
+                {
+                    GC.Visible = false;
+                }
+                foreach (DataGridViewRow GC in GrillaCatalogo.Rows)
+                {
+                    foreach (DataGridViewCell c in GC.Cells)
+                    {
+                        if ((c.Value.ToString().ToUpper()).IndexOf(textBusqueda.Text.ToUpper()) == 0)
+                        {
+                            GC.Visible = true;
+                            break;
+                        }
+
+                    }
+                }
+            }
+            else
+            {
+                CargarGrillaCatalogo();
+            }
+
+        }
+
+        private void BtnBuscar_Click(object sender, EventArgs e)
         {
         }
     }
