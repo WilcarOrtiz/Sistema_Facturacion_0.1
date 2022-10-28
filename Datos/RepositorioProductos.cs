@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Datos
 {
-    public class RepositorioProductos : Archivos
+    public class RepositorioProductos : ArchivosProductos
     {
         public RepositorioProductos() : base()
         {
