@@ -15,14 +15,11 @@ namespace Presentacion_GUI
     {
 
         Logica.FuncionesProductos funcionesProductos = new Logica.FuncionesProductos();
-        int fila;
-        DataTable Tabla;
+        int fila;DataTable Tabla;
         public FrmAdmin()
         {
             InitializeComponent();
-
         }
-
         private void txtCedula_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
@@ -44,7 +41,6 @@ namespace Presentacion_GUI
                 }
             }
         }
-
         private void txtNombres_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Char.IsDigit(e.KeyChar) && txtNombres.TextLength == 0)
@@ -63,7 +59,6 @@ namespace Presentacion_GUI
                 }
             }
         }
-
         private void txtApellidos_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Char.IsDigit(e.KeyChar) && txtApellidos.TextLength == 0)
@@ -82,7 +77,6 @@ namespace Presentacion_GUI
                 }
             }
         }
-
         private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
@@ -101,7 +95,6 @@ namespace Presentacion_GUI
                 }
             }
         }
-
         private void txtCorreo_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar == Convert.ToChar(Keys.Enter)))
@@ -118,7 +111,6 @@ namespace Presentacion_GUI
                 }
             }
         }
-
         private void txtContraseña_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
@@ -133,35 +125,21 @@ namespace Presentacion_GUI
                 }
             }
         }
-
         private void cmbCargos_SelectedIndexChanged(object sender, EventArgs e)
         {
             Seleccion();
             txtCedula.Select();
         }
-
         private void FrmAdmin_Load(object sender, EventArgs e)
         {
-            Seleccion();
-            Seleccion2();
-            CargarGrillaProductos();
-            // CargarGrillaCatalogo();
-            //  CargarTabla();
-            CargarTabla();
-            DeclaracionTabla();
+            Seleccion();Seleccion2();
+            CargarGrillaProductos();CargarTabla();
         }
-
         public void Restablecer()
         {
-            txtCedula.Text = "Cedula";
-            txtNombres.Text = "Nombres";
-            txtApellidos.Text = "Apellidos";
-            txtTelefono.Text = "Telefono";
-            txtCorreo.Text = "Correo";
-            txtContraseña.Text = "Contraseña";
-            cmbCargos.SelectedIndex = -1;
+            txtCedula.Text = "Cedula";txtNombres.Text = "Nombres";txtApellidos.Text = "Apellidos";
+            txtTelefono.Text = "Telefono";txtCorreo.Text = "Correo";txtContraseña.Text = "Contraseña";cmbCargos.SelectedIndex = -1;
         }
-
         public void Seleccion()
         {
             if (cmbCargos.Text == "")
@@ -178,7 +156,6 @@ namespace Presentacion_GUI
                 }
             }
         }
-
         public void BloqueoTextBox()
         {
             txtApellidos.Enabled = false;
@@ -188,7 +165,6 @@ namespace Presentacion_GUI
             txtCorreo.Enabled = false;
             txtNombres.Enabled = false;
         }
-
         public void DesbloqueoTextBox()
         {
             txtApellidos.Enabled = true;
@@ -198,7 +174,6 @@ namespace Presentacion_GUI
             txtNombres.Enabled = true;
             txtContraseña.Enabled = false;
         }
-
         private void txtCedula_Click(object sender, EventArgs e)
         {
             if (txtCedula.Text == "Cedula")
@@ -206,7 +181,6 @@ namespace Presentacion_GUI
                 txtCedula.Clear();
             }
         }
-
         private void txtNombres_Click(object sender, EventArgs e)
         {
             if (txtNombres.Text == "Nombres")
@@ -214,7 +188,6 @@ namespace Presentacion_GUI
                 txtNombres.Clear();
             }
         }
-
         private void txtApellidos_Click(object sender, EventArgs e)
         {
             if (txtApellidos.Text == "Apellidos")
@@ -222,7 +195,6 @@ namespace Presentacion_GUI
                 txtApellidos.Clear();
             }
         }
-
         private void txtTelefono_Click(object sender, EventArgs e)
         {
             if (txtTelefono.Text == "Telefono")
@@ -230,7 +202,6 @@ namespace Presentacion_GUI
                 txtTelefono.Clear();
             }
         }
-
         private void txtCorreo_Click(object sender, EventArgs e)
         {
             if (txtCorreo.Text == "Correo")
@@ -238,7 +209,6 @@ namespace Presentacion_GUI
                 txtCorreo.Clear();
             }
         }
-
         private void txtContraseña_Click(object sender, EventArgs e)
         {
             if (txtContraseña.Text == "Contraseña")
@@ -246,7 +216,6 @@ namespace Presentacion_GUI
                 txtContraseña.Clear();
             };
         }
-
         private void pbGuardarPersonal_Click(object sender, EventArgs e)
         {
             switch (vacio())
@@ -254,13 +223,11 @@ namespace Presentacion_GUI
                 case true:
                     MessageBox.Show("Debe llenar todos los campos", "VERIFICAR.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     break;
-
                 case false:
                     Restablecer();
                     break;
             }
         }
-
         public Boolean vacio()
         {
             if (txtContraseña.Text == "" || txtCedula.Text == "" || txtApellidos.Text == "" ||
@@ -270,36 +237,18 @@ namespace Presentacion_GUI
             }
             return false;
         }
-
-        private void txtNombreProduc_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
-
-
-        // PAGINA DE PRODUCTOS.  ///////////////////////////////
+        ///////////////////  PAGINA DE PRODUCTOS.  ///////////////////////////////
 
         public void BloqueoProduct()
         {
-            txtNombreProduc.Enabled = false;
-            txtDescrip.Enabled = false;
-            txtPrecioC.Enabled = false;
-            txtCodigo.Enabled = false;
-            txtPrecioV.Enabled = false;
-            Cantidad.Enabled = false;
-
+            txtNombreProduc.Enabled = false;txtDescrip.Enabled = false;txtPrecioC.Enabled = false;
+            txtCodigo.Enabled = false;txtPrecioV.Enabled = false;Cantidad.Enabled = false;
         }
-
         public void DesbloqueoProduct()
         {
-            txtNombreProduc.Enabled = true;
-            txtDescrip.Enabled = true;
-            txtPrecioC.Enabled = true;
-            txtCodigo.Enabled = true;
-            txtPrecioV.Enabled = true;
-            Cantidad.Enabled = true;
+            txtNombreProduc.Enabled = true;txtDescrip.Enabled = true;txtPrecioC.Enabled = true;
+            txtCodigo.Enabled = true;txtPrecioV.Enabled = true;Cantidad.Enabled = true;
         }
-
         public void Seleccion2()
         {
             if (cmbUnidades.Text == "")
@@ -319,7 +268,6 @@ namespace Presentacion_GUI
             }
             return false;
         }
-
         private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
@@ -335,14 +283,16 @@ namespace Presentacion_GUI
                 }
                 else
                 {
-
-
-
-                    txtNombreProduc.Focus();
+                    if (funcionesProductos.ObtenerPorCodigo(txtCodigo.Text) != null)
+                    {
+                        MessageBox.Show("El codigo ya existe para otro producto", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        txtCodigo.Text = "";
+                        txtCodigo.Focus();
+                    }
+                    else { txtNombreProduc.Focus(); }
                 }
             }
         }
-
         private void txtNombreProduc_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Char.IsDigit(e.KeyChar) && txtNombreProduc.TextLength == 0)
@@ -361,7 +311,6 @@ namespace Presentacion_GUI
                 }
             }
         }
-
         private void txtDescrip_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Char.IsDigit(e.KeyChar) && txtDescrip.TextLength == 0)
@@ -373,7 +322,6 @@ namespace Presentacion_GUI
                 txtPrecioC.Focus();
             }
         }
-
         private void txtPrecioC_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
@@ -394,23 +342,14 @@ namespace Presentacion_GUI
                 }
             }
         }
-
         private void cmbUnidades_SelectedIndexChanged(object sender, EventArgs e)
         {
             Seleccion2();
         }
-
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Cantidad_SelectedItemChanged(object sender, EventArgs e)
         {
             Cantidad.UpButton();
         }
-
         private void txtPrecioV_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
@@ -426,16 +365,12 @@ namespace Presentacion_GUI
                 }
                 else
                 {
-                    Cantidad.Focus()
-;
+                    Cantidad.Focus();
                 }
             }
         }
 
         //CAPTURA DE INFORMACION 
-
-
-
         void GuardarP()
         {
             var Articulo = new Entitades.Producto();
@@ -466,14 +401,9 @@ namespace Presentacion_GUI
         }
         public void RestablecerP()
         {
-            txtCodigo.Text = "";
-            txtNombreProduc.Text = "";
-            txtDescrip.Text = "";
-            Cantidad.Value = 0;
-            cmbUnidades.Text = "";
-            txtPrecioC.Text = "";
-            txtPrecioV.Text = "";
-            cmbUnidades.Focus();
+            txtCodigo.Text = "";txtNombreProduc.Text = ""; txtDescrip.Text = "";
+            Cantidad.Value = 1;cmbUnidades.Text = "";txtPrecioC.Text = "";
+            txtPrecioV.Text = "";cmbUnidades.Focus();
 
         }
         public Boolean vacioP()
@@ -506,18 +436,18 @@ namespace Presentacion_GUI
             fila = e.RowIndex;
             if (this.GrillaCatalogo.Columns[e.ColumnIndex].Index == 0)
             {
-                String Codigo = GrillaCatalogo.Rows[fila].Cells[0].Value.ToString();
+                String Codigo = GrillaCatalogo.Rows[fila].Cells[2].Value.ToString();
                 MessageBox.Show(funcionesProductos.EliminarProducto(funcionesProductos.ObtenerPorCodigo(Codigo)));
-                CargarGrillaCatalogo();
+                CargarTabla();
+                CargarGrillaProductos();
 
             }
             if (this.GrillaCatalogo.Columns[e.ColumnIndex].Index == 1)
             {
                 VistaParaProductos(funcionesProductos.GetAllProductos()[e.RowIndex]);
                 CargarTabla();
-                //CargarGrillaCatalogo();
+                CargarGrillaProductos();
             }
-
         }
         public struct Datos
         {
@@ -545,23 +475,6 @@ namespace Presentacion_GUI
             FrmProductosEdit FPE = new FrmProductosEdit(informacion);
             FPE.ShowDialog();
         }
-
-
-
-        void DeclaracionTabla()
-        {
-            //Tabla = new DataTable();
-            //Tabla.Columns.Add("Codigo");
-            //Tabla.Columns.Add("Nombre");
-            //Tabla.Columns.Add("Cantidad");
-            //Tabla.Columns.Add("Unidad");
-            //Tabla.Columns.Add("$ Compra");
-            //Tabla.Columns.Add("$ Venta");
-        }
-
-
-
-
         void CargarTabla()
         {
             Tabla = new DataTable();
@@ -577,7 +490,6 @@ namespace Presentacion_GUI
             }
             GrillaCatalogo.DataSource = Tabla;
         }
-
         private void textBusqueda_TextChanged(object sender, EventArgs e)
         {
             DataView Dv = Tabla.DefaultView;

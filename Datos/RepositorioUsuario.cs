@@ -25,7 +25,6 @@ namespace Datos
             sr.Close();
             return usuarios;
         }
-
         Entitades.Usuario Mappear(String linea)
         {
             var Usuarios = new Entitades.Usuario();

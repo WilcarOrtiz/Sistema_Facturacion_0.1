@@ -11,7 +11,6 @@ namespace Datos
     public class ArchivosProductos
     {
         protected String ruta;
-
         public ArchivosProductos()
         {
             ruta = "Producto.txt";
@@ -20,7 +19,6 @@ namespace Datos
         {
             ruta = FileName;
         }
-
         public String GuardarProducto(Entitades.Producto Articulo)
         {
             StreamWriter sw = new StreamWriter(ruta, true);
@@ -28,6 +26,5 @@ namespace Datos
             sw.Close();
             return "Correcto";
         }
-
     }
 }

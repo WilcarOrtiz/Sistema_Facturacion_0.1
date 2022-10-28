@@ -10,17 +10,14 @@ namespace Datos
     public class ArchivosPersona
     {
         protected String ruta;
-
         public ArchivosPersona()
         {
             ruta = "Archivo.txt";
         }
-
         public ArchivosPersona(String FileName)
         {
             ruta= FileName;
         }
-
         public String GuardarPersona(Entitades.Usuario Persona)
         {
             StreamWriter sw = new StreamWriter(ruta, true);

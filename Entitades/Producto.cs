@@ -34,7 +34,7 @@ namespace Entitades
         }
         public override string ToString()
         {
-            return ID + ";" + Codigo + ";" + NombreProducto + ";" + Descripcion + ";" + Cantidad + ";" + Unidad + ";" + PrecioC + ";" + PrecioV;
+                return ID+";"+Codigo+";"+NombreProducto+";"+Descripcion+";"+Cantidad+";"+Unidad+";"+PrecioC+";"+PrecioV;
         }
     }
 }

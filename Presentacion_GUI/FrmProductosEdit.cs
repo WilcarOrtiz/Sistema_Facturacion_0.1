@@ -72,7 +72,6 @@ namespace Presentacion_GUI
             CapturarActualizacion();
             this.Close(); 
         }
-
         private void BtnCancelarEdit_Click(object sender, EventArgs e)
         {
             this.Close(); 
