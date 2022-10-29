@@ -5,6 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics.Contracts;
+using System.IO;
+using System.Xml.Linq;
+
+
 
 namespace Logica
 {
@@ -61,7 +65,7 @@ namespace Logica
             try
             {
                 products.Remove(Articulo);
-                return RepositorioProductos.Actualizar(DisminuirId(products),false);
+                return RepositorioProductos.Actualizar(DisminuirId(products), false);
             }
             catch (Exception EX)
             {
@@ -87,12 +91,12 @@ namespace Logica
             return null;
         }
         public List<Producto> DisminuirId(List<Producto> products)
-     
+
         {
             int Conta = 1;
             foreach (var item in products)
             {
-                item.ID = Conta.ToString(); 
+                item.ID = Conta.ToString();
                 Conta++;
             }
             return products;
@@ -101,10 +105,9 @@ namespace Logica
         {
             return GetAllProductos().Count + 1;
         }
-
         public String ArticuloXId(String id)
         {
-            String Cod ="";
+            String Cod = "";
             foreach (Producto item in RepositorioProductos.GetAll())
             {
                 if (item.ID == id)
@@ -116,7 +119,7 @@ namespace Logica
         }
         public String IdXArticulo(String Cod)
         {
-            String ID = ""; 
+            String ID = "";
             foreach (Producto item in RepositorioProductos.GetAll())
             {
                 if (item.Codigo == Cod)
@@ -125,6 +128,26 @@ namespace Logica
                 }
             }
             return ID;
+        }
+        public decimal ValorFinal(String Unidad, int Cantidad, float Precio)
+        {
+            //como se maneja es por unidad debemos sacar el valor final
+            int Cant = 0;
+            decimal ValorTotal = 0;
+            switch (Unidad)
+            {
+                case "UNIDAD":
+                    Cant = 1;
+                    break;
+                case "CAJA(24Unds)":
+                    Cant = 24;
+
+                    break;
+                case "CANASTA(30Unds)":
+                    Cant = 30;
+                    break;
+            }
+            return ValorTotal = (decimal)(Precio * (float)(Cant * Cantidad));
         }
     }
 }

@@ -40,9 +40,7 @@ namespace Presentacion_GUI
             return false;
         }
         void CapturarActualizacion()
-        {
-            MessageBox.Show(textCodigoEditar.Text);
-            String Cod = FuncionesProductos.ArticuloXId(Id);
+        {   String Cod = FuncionesProductos.ArticuloXId(Id);
             Producto Articulo = FuncionesProductos.ObtenerPorCodigo(Cod);
             String IdEdit = FuncionesProductos.IdXArticulo(textCodigoEditar.Text);
             if ((Id == IdEdit) || (FuncionesProductos.ObtenerPorCodigo(textCodigoEditar.Text) == null))

@@ -9,6 +9,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using iTextSharp.tool.xml;
+using System.IO;
+using System.Windows.Forms.VisualStyles;
+
 namespace Presentacion_GUI
 {
     public partial class FrmAdmin : Form
@@ -158,21 +164,15 @@ namespace Presentacion_GUI
         }
         public void BloqueoTextBox()
         {
-            txtApellidos.Enabled = false;
-            txtTelefono.Enabled = false;
-            txtCedula.Enabled = false;
-            txtContraseña.Enabled = false;
-            txtCorreo.Enabled = false;
-            txtNombres.Enabled = false;
+            txtApellidos.Enabled = false;txtTelefono.Enabled = false;
+            txtCedula.Enabled = false;txtContraseña.Enabled = false;
+            txtCorreo.Enabled = false;txtNombres.Enabled = false;
         }
         public void DesbloqueoTextBox()
         {
-            txtApellidos.Enabled = true;
-            txtTelefono.Enabled = true;
-            txtCedula.Enabled = true;
-            txtCorreo.Enabled = true;
-            txtNombres.Enabled = true;
-            txtContraseña.Enabled = false;
+            txtApellidos.Enabled = true;txtTelefono.Enabled = true;
+            txtCedula.Enabled = true;txtCorreo.Enabled = true;
+            txtNombres.Enabled = true;txtContraseña.Enabled = false;
         }
         private void txtCedula_Click(object sender, EventArgs e)
         {
@@ -392,12 +392,12 @@ namespace Presentacion_GUI
                     break;
                 case false:
                     GuardarP();
-                    RestablecerP();
+                    RestablecerCasillasProductos();
                     CargarGrillaProductos();
                     break;
             }
         }
-        public void RestablecerP()
+        public void RestablecerCasillasProductos()
         {
             txtCodigo.Text = "";txtNombreProduc.Text = ""; txtDescrip.Text = "";
             Cantidad.Value = 1;cmbUnidades.Text = "";txtPrecioC.Text = "";
@@ -480,11 +480,11 @@ namespace Presentacion_GUI
             Tabla.Columns.Add("Nombre");
             Tabla.Columns.Add("Cantidad");
             Tabla.Columns.Add("Unidad");
-            Tabla.Columns.Add("$ Compra");
-            Tabla.Columns.Add("$ Venta");
+            Tabla.Columns.Add("p. Venta");
+            Tabla.Columns.Add("P. Compra");
             foreach (var item in funcionesProductos.GetAllProductos())
             {
-                Tabla.Rows.Add(item.Codigo, item.NombreProducto, item.Cantidad, item.Unidad, item.PrecioC, item.PrecioV);
+                Tabla.Rows.Add(item.Codigo, item.NombreProducto, item.Cantidad, item.Unidad, item.PrecioV, item.PrecioC);
             }
             GrillaCatalogo.DataSource = Tabla;
         }
@@ -502,6 +502,62 @@ namespace Presentacion_GUI
                     Dv.RowFilter = " Nombre  LIKE '" + textBusqueda.Text + "%'";
                     GrillaCatalogo.DataSource = Dv;
                     break;
+            }
+        }
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            GenerarPDF();
+        }
+
+        void GenerarPDF()
+        {
+            SaveFileDialog Guardar = new SaveFileDialog();
+            string TituloPdf = DateTime.Now.ToString("REPORTE (dd/MM/yyyy)");
+            Guardar.FileName = TituloPdf + ".pdf";
+            string PaginaHTML_Texto = Properties.Resources.Plantilla.ToString();
+            PaginaHTML_Texto = PaginaHTML_Texto.Replace("@FECHA", DateTime.Now.ToString("dd/MM/yyyy"));
+            string filas = string.Empty;
+            decimal total = 0;
+            foreach (var item in funcionesProductos.GetAllProductos())
+            {
+                filas += "<tr>";
+                filas += "<td>" + item.Codigo.ToString() + "</td>";
+                filas += "<td>" + item.NombreProducto.ToString() + "</td>";
+                filas += "<td>" + item.Cantidad.ToString() + "</td>";
+                filas += "<td>" + item.Unidad.ToString() + "</td>";
+                filas += "<td>" + item.PrecioV.ToString() + "</td>";
+                filas += "<td>" + item.PrecioC.ToString() + "</td>";
+                filas += "</tr>";
+                total += funcionesProductos.ValorFinal(item.Unidad.ToString(), item.Cantidad, item.PrecioC);
+            }
+            PaginaHTML_Texto = PaginaHTML_Texto.Replace("@FILAS", filas);
+            PaginaHTML_Texto = PaginaHTML_Texto.Replace("@TOTAL", total.ToString());
+
+            if (Guardar.ShowDialog() == DialogResult.OK)
+            {
+                using (FileStream stream = new FileStream(Guardar.FileName, FileMode.Create))
+                {
+                    //Creamos un nuevo documento y lo definimos como PDF
+                    Document pdfDoc = new Document(PageSize.A4, 25, 25, 25, 25);
+
+                    PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
+                    pdfDoc.Open();
+                    pdfDoc.Add(new Phrase(""));
+
+                    iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Properties.Resources.IconoCervezaPdf,System.Drawing.Imaging.ImageFormat.Png);
+                    img.ScaleToFit(60, 60);
+                    img.Alignment = iTextSharp.text.Image.UNDERLYING;
+
+                    img.SetAbsolutePosition(pdfDoc.LeftMargin, pdfDoc.Top - 60);
+                    pdfDoc.Add(img);
+
+                    using (StringReader sr = new StringReader(PaginaHTML_Texto))
+                    {
+                        XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
+                    }
+                    pdfDoc.Close();
+                    stream.Close();
+                }
             }
         }
     }
