@@ -237,8 +237,7 @@ namespace Presentacion_GUI
             }
             return false;
         }
-        ///////////////////  PAGINA DE PRODUCTOS.  ///////////////////////////////
-
+        ///////////////////  PAGINA DE PRODUCTOS.  //////////////////////////////
         public void BloqueoProduct()
         {
             txtNombreProduc.Enabled = false;txtDescrip.Enabled = false;txtPrecioC.Enabled = false;
@@ -369,7 +368,6 @@ namespace Presentacion_GUI
                 }
             }
         }
-
         //CAPTURA DE INFORMACION 
         void GuardarP()
         {
