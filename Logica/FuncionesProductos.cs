@@ -133,21 +133,19 @@ namespace Logica
         {
             //como se maneja es por unidad debemos sacar el valor final
             int Cant = 0;
-            decimal ValorTotal = 0;
             switch (Unidad)
             {
                 case "UNIDAD":
                     Cant = 1;
                     break;
-                case "CAJA(24Unds)":
+                case "CAJA(24 Unds)":
                     Cant = 24;
-
                     break;
-                case "CANASTA(30Unds)":
+                case "CANASTA(30 Unds)":
                     Cant = 30;
                     break;
             }
-            return ValorTotal = (decimal)(Precio * (float)(Cant * Cantidad));
+            return (decimal)(Precio * (float)(Cant * Cantidad));
         }
     }
 }
