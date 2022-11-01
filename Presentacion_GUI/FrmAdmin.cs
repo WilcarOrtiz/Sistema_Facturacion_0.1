@@ -15,6 +15,9 @@ using iTextSharp.tool.xml;
 using System.IO;
 using System.Windows.Forms.VisualStyles;
 
+
+//cambi pc 
+
 namespace Presentacion_GUI
 {
     public partial class FrmAdmin : Form
