@@ -271,11 +271,6 @@ namespace Presentacion_GUI
             return false;
         }
 
-        private void txtNombreProduc_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
-
 
         // PAGINA DE PRODUCTOS.  ///////////////////////////////
 
@@ -400,12 +395,6 @@ namespace Presentacion_GUI
             Seleccion2();
         }
 
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Cantidad_SelectedItemChanged(object sender, EventArgs e)
         {
             Cantidad.UpButton();
@@ -434,8 +423,6 @@ namespace Presentacion_GUI
 
         //CAPTURA DE INFORMACION 
 
-
-
         void GuardarP()
         {
             var Articulo = new Entitades.Producto();
@@ -459,17 +446,17 @@ namespace Presentacion_GUI
                     break;
                 case false:
                     GuardarP();
-                    RestablecerP();
+                    RestablecerProductos();
                     CargarGrillaProductos();
                     break;
             }
         }
-        public void RestablecerP()
+        public void RestablecerProductos()
         {
             txtCodigo.Text = "";
             txtNombreProduc.Text = "";
             txtDescrip.Text = "";
-            Cantidad.Value = 0;
+            Cantidad.Value = 1;
             cmbUnidades.Text = "";
             txtPrecioC.Text = "";
             txtPrecioV.Text = "";
@@ -545,9 +532,6 @@ namespace Presentacion_GUI
             FrmProductosEdit FPE = new FrmProductosEdit(informacion);
             FPE.ShowDialog();
         }
-
-
-
         void DeclaracionTabla()
         {
             //Tabla = new DataTable();
@@ -558,10 +542,6 @@ namespace Presentacion_GUI
             //Tabla.Columns.Add("$ Compra");
             //Tabla.Columns.Add("$ Venta");
         }
-
-
-
-
         void CargarTabla()
         {
             Tabla = new DataTable();
@@ -577,7 +557,6 @@ namespace Presentacion_GUI
             }
             GrillaCatalogo.DataSource = Tabla;
         }
-
         private void textBusqueda_TextChanged(object sender, EventArgs e)
         {
             DataView Dv = Tabla.DefaultView;
