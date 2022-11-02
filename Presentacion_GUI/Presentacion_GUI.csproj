@@ -52,11 +52,29 @@
     <Compile Include="FrmAdmin.Designer.cs">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmAdmin1.cs">
+    <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAdmin1.Designer.cs">
-      <DependentUpon>FrmAdmin1.cs</DependentUpon>
+    <Compile Include="FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFactura.Designer.cs">
+      <DependentUpon>FrmFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPersonal.Designer.cs">
+      <DependentUpon>FrmPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProductos.Designer.cs">
+      <DependentUpon>FrmProductos.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmProductosEdit.cs">
       <SubType>Form</SubType>
@@ -64,11 +82,11 @@
     <Compile Include="FrmProductosEdit.Designer.cs">
       <DependentUpon>FrmProductosEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmVendedor.cs">
+    <Compile Include="FrmVistaProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmVendedor.Designer.cs">
-      <DependentUpon>FrmVendedor.cs</DependentUpon>
+    <Compile Include="FrmVistaProductos.Designer.cs">
+      <DependentUpon>FrmVistaProductos.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -81,14 +99,23 @@
     <EmbeddedResource Include="FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAdmin1.resx">
-      <DependentUpon>FrmAdmin1.cs</DependentUpon>
+    <EmbeddedResource Include="FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFactura.resx">
+      <DependentUpon>FrmFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPersonal.resx">
+      <DependentUpon>FrmPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProductos.resx">
+      <DependentUpon>FrmProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmProductosEdit.resx">
       <DependentUpon>FrmProductosEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmVendedor.resx">
-      <DependentUpon>FrmVendedor.cs</DependentUpon>
+    <EmbeddedResource Include="FrmVistaProductos.resx">
+      <DependentUpon>FrmVistaProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

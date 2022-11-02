@@ -1,6 +1,6 @@
 ﻿namespace Presentacion_GUI
 {
-    partial class FrmVendedor
+    partial class FrmFactura
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVendedor));
             this.SuspendLayout();
             // 
-            // FrmVendedor
+            // FrmFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1026, 707);
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FrmVendedor";
-            this.Text = "FrmVendedor";
+            this.Name = "FrmFactura";
+            this.Text = "FrmFactura";
             this.ResumeLayout(false);
 
         }
