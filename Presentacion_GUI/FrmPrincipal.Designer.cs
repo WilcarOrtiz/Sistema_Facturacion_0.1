@@ -61,7 +61,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(231, 700);
+            this.panel1.Size = new System.Drawing.Size(231, 800);
             this.panel1.TabIndex = 0;
             // 
             // btnPersonal
@@ -71,7 +71,7 @@
             this.btnPersonal.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPersonal.Image = ((System.Drawing.Image)(resources.GetObject("btnPersonal.Image")));
             this.btnPersonal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPersonal.Location = new System.Drawing.Point(0, 311);
+            this.btnPersonal.Location = new System.Drawing.Point(0, 345);
             this.btnPersonal.Name = "btnPersonal";
             this.btnPersonal.Size = new System.Drawing.Size(231, 50);
             this.btnPersonal.TabIndex = 6;
@@ -86,7 +86,7 @@
             this.btnVerProductos.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerProductos.Image = ((System.Drawing.Image)(resources.GetObject("btnVerProductos.Image")));
             this.btnVerProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVerProductos.Location = new System.Drawing.Point(0, 245);
+            this.btnVerProductos.Location = new System.Drawing.Point(0, 274);
             this.btnVerProductos.Name = "btnVerProductos";
             this.btnVerProductos.Size = new System.Drawing.Size(231, 50);
             this.btnVerProductos.TabIndex = 5;
@@ -101,7 +101,7 @@
             this.btnProductos.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProductos.Image = ((System.Drawing.Image)(resources.GetObject("btnProductos.Image")));
             this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProductos.Location = new System.Drawing.Point(0, 180);
+            this.btnProductos.Location = new System.Drawing.Point(0, 200);
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Size = new System.Drawing.Size(231, 50);
             this.btnProductos.TabIndex = 4;
@@ -162,7 +162,7 @@
             this.btnFacturar.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFacturar.Image = ((System.Drawing.Image)(resources.GetObject("btnFacturar.Image")));
             this.btnFacturar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFacturar.Location = new System.Drawing.Point(0, 115);
+            this.btnFacturar.Location = new System.Drawing.Point(0, 124);
             this.btnFacturar.Name = "btnFacturar";
             this.btnFacturar.Size = new System.Drawing.Size(231, 50);
             this.btnFacturar.TabIndex = 0;
@@ -179,14 +179,14 @@
             this.PanelTitulo.ForeColor = System.Drawing.Color.RosyBrown;
             this.PanelTitulo.Location = new System.Drawing.Point(231, 0);
             this.PanelTitulo.Name = "PanelTitulo";
-            this.PanelTitulo.Size = new System.Drawing.Size(969, 45);
+            this.PanelTitulo.Size = new System.Drawing.Size(1169, 45);
             this.PanelTitulo.TabIndex = 3;
             this.PanelTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelTitulo_MouseDown);
             // 
             // pbMinimizar
             // 
             this.pbMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("pbMinimizar.Image")));
-            this.pbMinimizar.Location = new System.Drawing.Point(906, 11);
+            this.pbMinimizar.Location = new System.Drawing.Point(1103, 11);
             this.pbMinimizar.Name = "pbMinimizar";
             this.pbMinimizar.Size = new System.Drawing.Size(25, 25);
             this.pbMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -197,7 +197,7 @@
             // pbSalir
             // 
             this.pbSalir.Image = ((System.Drawing.Image)(resources.GetObject("pbSalir.Image")));
-            this.pbSalir.Location = new System.Drawing.Point(937, 11);
+            this.pbSalir.Location = new System.Drawing.Point(1134, 11);
             this.pbSalir.Name = "pbSalir";
             this.pbSalir.Size = new System.Drawing.Size(25, 25);
             this.pbSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -212,21 +212,21 @@
             this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelContenedor.Location = new System.Drawing.Point(231, 45);
             this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.Size = new System.Drawing.Size(969, 655);
+            this.PanelContenedor.Size = new System.Drawing.Size(1169, 755);
             this.PanelContenedor.TabIndex = 4;
             // 
-            // FrmAdmin1
+            // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.ClientSize = new System.Drawing.Size(1200, 700);
+            this.ClientSize = new System.Drawing.Size(1400, 800);
             this.Controls.Add(this.PanelContenedor);
             this.Controls.Add(this.PanelTitulo);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FrmAdmin1";
+            this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAdmin1";
             this.panel1.ResumeLayout(false);
