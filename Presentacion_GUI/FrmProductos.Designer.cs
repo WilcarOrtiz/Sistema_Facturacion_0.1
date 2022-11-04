@@ -291,7 +291,7 @@
             // 
             // BtnGuardar
             // 
-            this.BtnGuardar.BackColor = System.Drawing.Color.Azure;
+            this.BtnGuardar.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BtnGuardar.FlatAppearance.BorderSize = 0;
             this.BtnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.BtnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
