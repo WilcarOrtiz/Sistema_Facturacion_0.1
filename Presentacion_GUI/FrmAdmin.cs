@@ -512,6 +512,7 @@ namespace Presentacion_GUI
             GenerarPDF();
         }
 
+        //ACTUALIZACION PDF 
         void GenerarPDF()
         {
             SaveFileDialog Guardar = new SaveFileDialog();
