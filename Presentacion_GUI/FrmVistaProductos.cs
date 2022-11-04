@@ -122,11 +122,6 @@ namespace Presentacion_GUI
 
         }
 
-        private void GrillaCatalogo_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void FrmVistaProductos_Load(object sender, EventArgs e)
         {
             CargarTabla();

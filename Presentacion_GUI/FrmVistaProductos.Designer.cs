@@ -45,6 +45,7 @@
             this.textBusqueda.Name = "textBusqueda";
             this.textBusqueda.Size = new System.Drawing.Size(264, 26);
             this.textBusqueda.TabIndex = 7;
+            this.textBusqueda.TextChanged += new System.EventHandler(this.textBusqueda_TextChanged);
             // 
             // cmbTipoBusqueda
             // 
@@ -81,7 +82,7 @@
             this.GrillaCatalogo.RowHeadersWidth = 62;
             this.GrillaCatalogo.Size = new System.Drawing.Size(1094, 616);
             this.GrillaCatalogo.TabIndex = 8;
-            this.GrillaCatalogo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GrillaCatalogo_CellContentClick);
+            this.GrillaCatalogo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GrillaCatalogo_CellClick);
             // 
             // Eliminar
             // 
