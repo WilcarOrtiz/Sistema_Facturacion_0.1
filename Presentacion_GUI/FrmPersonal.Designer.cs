@@ -86,8 +86,9 @@
             this.txtContraseña.Size = new System.Drawing.Size(228, 26);
             this.txtContraseña.TabIndex = 7;
             this.txtContraseña.Text = "Contraseña";
-            this.txtContraseña.Click += new System.EventHandler(this.txtContraseña_Click);
+            this.txtContraseña.Enter += new System.EventHandler(this.txtContraseña_Enter);
             this.txtContraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContraseña_KeyPress);
+            this.txtContraseña.Leave += new System.EventHandler(this.txtContraseña_Leave);
             // 
             // cmbCargos
             // 
@@ -113,8 +114,9 @@
             this.txtTelefono.Size = new System.Drawing.Size(228, 26);
             this.txtTelefono.TabIndex = 5;
             this.txtTelefono.Text = "Telefono";
-            this.txtTelefono.Click += new System.EventHandler(this.txtTelefono_Click);
+            this.txtTelefono.Enter += new System.EventHandler(this.txtTelefono_Enter);
             this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
+            this.txtTelefono.Leave += new System.EventHandler(this.txtTelefono_Leave);
             // 
             // txtCorreo
             // 
@@ -123,8 +125,9 @@
             this.txtCorreo.Size = new System.Drawing.Size(228, 26);
             this.txtCorreo.TabIndex = 4;
             this.txtCorreo.Text = "Correo";
-            this.txtCorreo.Click += new System.EventHandler(this.txtCorreo_Click);
+            this.txtCorreo.Enter += new System.EventHandler(this.txtCorreo_Enter);
             this.txtCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCorreo_KeyPress);
+            this.txtCorreo.Leave += new System.EventHandler(this.txtCorreo_Leave);
             // 
             // txtApellidos
             // 
@@ -133,8 +136,9 @@
             this.txtApellidos.Size = new System.Drawing.Size(228, 26);
             this.txtApellidos.TabIndex = 3;
             this.txtApellidos.Text = "Apellidos";
-            this.txtApellidos.Click += new System.EventHandler(this.txtApellidos_Click);
+            this.txtApellidos.Enter += new System.EventHandler(this.txtApellidos_Enter);
             this.txtApellidos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellidos_KeyPress);
+            this.txtApellidos.Leave += new System.EventHandler(this.txtApellidos_Leave);
             // 
             // txtNombres
             // 
@@ -143,8 +147,9 @@
             this.txtNombres.Size = new System.Drawing.Size(228, 26);
             this.txtNombres.TabIndex = 2;
             this.txtNombres.Text = "Nombres";
-            this.txtNombres.Click += new System.EventHandler(this.txtNombres_Click);
+            this.txtNombres.Enter += new System.EventHandler(this.txtNombres_Enter);
             this.txtNombres.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombres_KeyPress);
+            this.txtNombres.Leave += new System.EventHandler(this.txtNombres_Leave);
             // 
             // txtCedula
             // 
@@ -154,8 +159,9 @@
             this.txtCedula.Size = new System.Drawing.Size(228, 26);
             this.txtCedula.TabIndex = 1;
             this.txtCedula.Text = "Cedula";
-            this.txtCedula.Click += new System.EventHandler(this.txtCedula_Click);
+            this.txtCedula.Enter += new System.EventHandler(this.txtCedula_Enter);
             this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
+            this.txtCedula.Leave += new System.EventHandler(this.txtCedula_Leave);
             // 
             // pbFotoEmpleado
             // 

@@ -15,6 +15,7 @@ namespace Presentacion_GUI
         public FrmPersonal()
         {
             InitializeComponent();
+           
         }
 
         private void txtCedula_KeyPress(object sender, KeyPressEventArgs e)
@@ -159,6 +160,7 @@ namespace Presentacion_GUI
                 {
                     txtContraseña.Enabled = true;
                 }
+
             }
         }
 
@@ -182,53 +184,53 @@ namespace Presentacion_GUI
             txtContraseña.Enabled = false;
         }
 
-        private void txtCedula_Click(object sender, EventArgs e)
-        {
-            if (txtCedula.Text == "Cedula")
-            {
-                txtCedula.Clear();
-            }
-        }
+       //private void txtCedula_Click(object sender, EventArgs e)
+       // {
+       //     if (txtCedula.Text == "Cedula")
+       //     {
+       //         txtCedula.Clear();
+       //     }
+       // }
 
-        private void txtNombres_Click(object sender, EventArgs e)
-        {
-            if (txtNombres.Text == "Nombres")
-            {
-                txtNombres.Clear();
-            }
-        }
+        //private void txtNombres_Click(object sender, EventArgs e)
+        //{
+        //    if (txtNombres.Text == "Nombres")
+        //    {
+        //        txtNombres.Clear();
+        //    }
+        //}
 
-        private void txtApellidos_Click(object sender, EventArgs e)
-        {
-            if (txtApellidos.Text == "Apellidos")
-            {
-                txtApellidos.Clear();
-            }
-        }
+        //private void txtApellidos_Click(object sender, EventArgs e)
+        //{
+        //    if (txtApellidos.Text == "Apellidos")
+        //    {
+        //        txtApellidos.Clear();
+        //    }
+        //}
 
-        private void txtTelefono_Click(object sender, EventArgs e)
-        {
-            if (txtTelefono.Text == "Telefono")
-            {
-                txtTelefono.Clear();
-            }
-        }
+        //private void txtTelefono_Click(object sender, EventArgs e)
+        //{
+        //    if (txtTelefono.Text == "Telefono")
+        //    {
+        //        txtTelefono.Clear();
+        //    }
+        //}
 
-        private void txtCorreo_Click(object sender, EventArgs e)
-        {
-            if (txtCorreo.Text == "Correo")
-            {
-                txtCorreo.Clear();
-            }
-        }
+        //private void txtCorreo_Click(object sender, EventArgs e)
+        //{
+        //    if (txtCorreo.Text == "Correo")
+        //    {
+        //        txtCorreo.Clear();
+        //    }
+        //}
 
-        private void txtContraseña_Click(object sender, EventArgs e)
-        {
-            if (txtContraseña.Text == "Contraseña")
-            {
-                txtContraseña.Clear();
-            };
-        }
+        //private void txtContraseña_Click(object sender, EventArgs e)
+        //{
+        //    if (txtContraseña.Text == "Contraseña")
+        //    {
+        //        txtContraseña.Clear();
+        //    };
+        //}
 
         private void pbGuardarPersonal_Click(object sender, EventArgs e)
         {
@@ -256,7 +258,103 @@ namespace Presentacion_GUI
 
         private void FrmPersonal_Load(object sender, EventArgs e)
         {
-            SeleccionCargos();
+            //SeleccionCargos();
+        }
+
+        private void txtCedula_Enter(object sender, EventArgs e)
+        {
+            if (txtCedula.Text == "Cedula")
+            {
+                txtCedula.Clear();
+            }
+        }
+
+        private void txtCedula_Leave(object sender, EventArgs e)
+        {
+            if (txtCedula.Text == "")
+            {
+                txtCedula.Text= "Cedula";
+            }
+        }
+
+        private void txtNombres_Enter(object sender, EventArgs e)
+        {
+            if (txtNombres.Text == "Nombres")
+            {
+                txtNombres.Clear();
+            }
+        }
+
+        private void txtNombres_Leave(object sender, EventArgs e)
+        {
+            if (txtNombres.Text == "Nombres")
+            {
+                txtNombres.Text = "Nombres";
+            }
+        }
+
+        private void txtApellidos_Enter(object sender, EventArgs e)
+        {
+            if (txtApellidos.Text == "Apellidos")
+            {
+                txtApellidos.Clear();
+            }
+        }
+
+        private void txtApellidos_Leave(object sender, EventArgs e)
+        {
+            if (txtApellidos.Text == "")
+            {
+                txtApellidos.Text= "Apellidos";
+            }
+        }
+
+        private void txtTelefono_Enter(object sender, EventArgs e)
+        {
+            if (txtTelefono.Text == "Telefono")
+            {
+                txtTelefono.Clear();
+            }
+        }
+
+        private void txtTelefono_Leave(object sender, EventArgs e)
+        {
+            if (txtTelefono.Text == "")
+            {
+                txtTelefono.Text= "Telefono";
+            }
+        }
+
+        private void txtCorreo_Enter(object sender, EventArgs e)
+        {
+            if (txtCorreo.Text == "Correo")
+            {
+                txtCorreo.Clear();
+            }
+        }
+
+        private void txtCorreo_Leave(object sender, EventArgs e)
+        {
+            if (txtCorreo.Text == "")
+            {
+                txtCorreo.Text = "Correo";
+            }
+        }
+
+        private void txtContraseña_Enter(object sender, EventArgs e)
+        {
+            if (txtContraseña.Text == "Contraseña")
+            {
+                txtContraseña.Clear();
+            };
+        }
+
+        private void txtContraseña_Leave(object sender, EventArgs e)
+        {
+            if (txtContraseña.Text == "")
+            {
+                txtContraseña.Text= "Contraseña";
+            };
         }
     }
 }

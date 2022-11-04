@@ -39,6 +39,7 @@ namespace Presentacion_GUI
             public float PrecioC;
             public float PrecioV;
         }
+
         void VistaParaProductos(Entitades.Producto Articulo)
         {
             MessageBox.Show(Articulo.NombreProducto);
@@ -54,6 +55,7 @@ namespace Presentacion_GUI
             FrmProductosEdit FPE = new FrmProductosEdit(informacion);
             FPE.ShowDialog();
         }
+
         void DeclaracionTabla()
         {
             Tabla = new DataTable();
@@ -64,6 +66,7 @@ namespace Presentacion_GUI
             Tabla.Columns.Add("$ Compra");
             Tabla.Columns.Add("$ Venta");
         }
+
         void CargarTabla()
         {
             Tabla = new DataTable();
@@ -79,6 +82,7 @@ namespace Presentacion_GUI
             }
             GrillaCatalogo.DataSource = Tabla;
         }
+
         private void textBusqueda_TextChanged(object sender, EventArgs e)
         {
             DataView Dv = Tabla.DefaultView;
@@ -95,6 +99,7 @@ namespace Presentacion_GUI
                     break;
             }
         }
+
         void CargarGrillaCatalogo()
         {
             GrillaCatalogo.Rows.Clear();
@@ -103,6 +108,7 @@ namespace Presentacion_GUI
                 GrillaCatalogo.Rows.Add(item.Codigo, item.NombreProducto, item.Cantidad, item.Unidad, item.PrecioC, item.PrecioV);
             }
         }
+
         public void GrillaCatalogo_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             fila = e.RowIndex;

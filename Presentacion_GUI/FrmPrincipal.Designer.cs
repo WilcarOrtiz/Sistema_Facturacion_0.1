@@ -141,7 +141,7 @@
             this.lbNombre.Size = new System.Drawing.Size(58, 19);
             this.lbNombre.TabIndex = 1;
             this.lbNombre.Text = "Nombre";
-            this.lbNombre.Click += new System.EventHandler(this.label1_Click);
+            
             // 
             // pictureBox1
             // 
@@ -214,6 +214,7 @@
             this.PanelContenedor.Name = "PanelContenedor";
             this.PanelContenedor.Size = new System.Drawing.Size(1169, 755);
             this.PanelContenedor.TabIndex = 4;
+           
             // 
             // FrmPrincipal
             // 
