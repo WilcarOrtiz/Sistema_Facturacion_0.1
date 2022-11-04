@@ -130,7 +130,7 @@ namespace Presentacion_GUI
 
         private void cmbCargos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //SeleccionCargos();
+            SeleccionCargos();
             txtCedula.Select();
         }
 
