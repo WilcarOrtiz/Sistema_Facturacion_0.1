@@ -126,5 +126,23 @@ namespace Logica
             }
             return ID;
         }
+        public decimal ValorFinal(String Unidad, int Cantidad, float Precio)
+        {
+            //como se maneja es por unidad debemos sacar el valor final
+            int Cant = 0;
+            switch (Unidad)
+            {
+                case "UNIDAD":
+                    Cant = 1;
+                    break;
+                case "CAJA(24 Unds)":
+                    Cant = 24;
+                    break;
+                case "CANASTA(30 Unds)":
+                    Cant = 30;
+                    break;
+            }
+            return (decimal)(Precio * (float)(Cant * Cantidad));
+        }
     }
 }

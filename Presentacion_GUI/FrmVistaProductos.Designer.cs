@@ -34,6 +34,7 @@
             this.GrillaCatalogo = new System.Windows.Forms.DataGridView();
             this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column15 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnImprimir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.GrillaCatalogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,12 +98,23 @@
             this.Column15.Name = "Column15";
             this.Column15.Width = 150;
             // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Location = new System.Drawing.Point(875, 30);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(149, 48);
+            this.btnImprimir.TabIndex = 9;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
             // FrmVistaProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(1169, 755);
+            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.GrillaCatalogo);
             this.Controls.Add(this.textBusqueda);
             this.Controls.Add(this.cmbTipoBusqueda);
@@ -125,5 +137,6 @@
         private System.Windows.Forms.DataGridView GrillaCatalogo;
         private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
         private System.Windows.Forms.DataGridViewButtonColumn Column15;
+        private System.Windows.Forms.Button btnImprimir;
     }
 }
