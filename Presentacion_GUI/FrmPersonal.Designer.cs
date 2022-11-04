@@ -62,7 +62,7 @@
             this.gbIngreso.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.gbIngreso.Location = new System.Drawing.Point(52, 44);
             this.gbIngreso.Name = "gbIngreso";
-            this.gbIngreso.Size = new System.Drawing.Size(544, 615);
+            this.gbIngreso.Size = new System.Drawing.Size(526, 638);
             this.gbIngreso.TabIndex = 1;
             this.gbIngreso.TabStop = false;
             this.gbIngreso.Text = "Ingreso";
@@ -157,9 +157,9 @@
             // gbLista
             // 
             this.gbLista.Controls.Add(this.dgListaEmpleados);
-            this.gbLista.Location = new System.Drawing.Point(615, 44);
+            this.gbLista.Location = new System.Drawing.Point(584, 44);
             this.gbLista.Name = "gbLista";
-            this.gbLista.Size = new System.Drawing.Size(504, 638);
+            this.gbLista.Size = new System.Drawing.Size(535, 638);
             this.gbLista.TabIndex = 2;
             this.gbLista.TabStop = false;
             this.gbLista.Text = "Lista";
@@ -171,7 +171,7 @@
             this.dgListaEmpleados.Name = "dgListaEmpleados";
             this.dgListaEmpleados.RowHeadersWidth = 62;
             this.dgListaEmpleados.RowTemplate.Height = 28;
-            this.dgListaEmpleados.Size = new System.Drawing.Size(448, 585);
+            this.dgListaEmpleados.Size = new System.Drawing.Size(474, 585);
             this.dgListaEmpleados.TabIndex = 0;
             // 
             // FrmPersonal

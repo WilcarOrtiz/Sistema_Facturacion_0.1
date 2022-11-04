@@ -34,14 +34,12 @@
             this.GrillaCatalogo = new System.Windows.Forms.DataGridView();
             this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column15 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.GrillaCatalogo)).BeginInit();
             this.SuspendLayout();
             // 
             // textBusqueda
             // 
-            this.textBusqueda.Location = new System.Drawing.Point(250, 30);
+            this.textBusqueda.Location = new System.Drawing.Point(284, 30);
             this.textBusqueda.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBusqueda.Name = "textBusqueda";
             this.textBusqueda.Size = new System.Drawing.Size(264, 26);
@@ -57,7 +55,7 @@
             this.cmbTipoBusqueda.Location = new System.Drawing.Point(126, 28);
             this.cmbTipoBusqueda.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbTipoBusqueda.Name = "cmbTipoBusqueda";
-            this.cmbTipoBusqueda.Size = new System.Drawing.Size(116, 28);
+            this.cmbTipoBusqueda.Size = new System.Drawing.Size(141, 28);
             this.cmbTipoBusqueda.TabIndex = 6;
             // 
             // label10
@@ -82,6 +80,7 @@
             this.GrillaCatalogo.RowHeadersWidth = 62;
             this.GrillaCatalogo.Size = new System.Drawing.Size(1094, 616);
             this.GrillaCatalogo.TabIndex = 8;
+            this.GrillaCatalogo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GrillaCatalogo_CellContentClick);
             // 
             // Eliminar
             // 
@@ -98,32 +97,12 @@
             this.Column15.Name = "Column15";
             this.Column15.Width = 150;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(646, 28);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 30);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Editar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(775, 28);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(101, 30);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Eliminar";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // FrmVistaProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(1169, 755);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.GrillaCatalogo);
             this.Controls.Add(this.textBusqueda);
             this.Controls.Add(this.cmbTipoBusqueda);
@@ -131,6 +110,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmVistaProductos";
             this.Text = "FrmVistaProductos";
+            this.Load += new System.EventHandler(this.FrmVistaProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GrillaCatalogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -145,7 +125,5 @@
         private System.Windows.Forms.DataGridView GrillaCatalogo;
         private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
         private System.Windows.Forms.DataGridViewButtonColumn Column15;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
     }
 }

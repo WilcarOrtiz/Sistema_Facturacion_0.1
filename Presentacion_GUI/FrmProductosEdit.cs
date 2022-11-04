@@ -17,7 +17,7 @@ namespace Presentacion_GUI
         Logica.FuncionesProductos FuncionesProductos = new Logica.FuncionesProductos();
         String Id;
         int CantidadI;
-        public FrmProductosEdit(FrmAdmin.Datos informacion)
+        public FrmProductosEdit(FrmVistaProductos.Datos informacion)
         {
             InitializeComponent();
             Id = informacion.ID;
@@ -76,6 +76,11 @@ namespace Presentacion_GUI
         private void BtnCancelarEdit_Click(object sender, EventArgs e)
         {
             this.Close(); 
+        }
+
+        private void FrmProductosEdit_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

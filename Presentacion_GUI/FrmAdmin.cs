@@ -330,9 +330,6 @@ namespace Presentacion_GUI
                 }
                 else
                 {
-
-
-
                     txtNombreProduc.Focus();
                 }
             }
@@ -572,6 +569,21 @@ namespace Presentacion_GUI
                     GrillaCatalogo.DataSource = Dv;
                     break;
             }
+        }
+
+        private void txtCedula_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+       private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
