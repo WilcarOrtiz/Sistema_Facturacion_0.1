@@ -526,8 +526,8 @@ namespace Presentacion_GUI
             informacion.Unidad = Articulo.Unidad;
             informacion.PrecioC = Articulo.PrecioC;
             informacion.PrecioV = Articulo.PrecioV;
-            FrmProductosEdit FPE = new FrmProductosEdit(informacion);
-            FPE.ShowDialog();
+            //FrmProductosEdit FPE = new FrmProductosEdit(informacion);
+            //FPE.ShowDialog();
         }
         void DeclaracionTabla()
         {

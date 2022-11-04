@@ -150,6 +150,7 @@
             0,
             0,
             0});
+            this.Cantidad.TabIndexChanged += new System.EventHandler(this.Cantidad_SelectedItemChanged);
             // 
             // label7
             // 
@@ -187,6 +188,7 @@
             this.txtPrecioV.Name = "txtPrecioV";
             this.txtPrecioV.Size = new System.Drawing.Size(163, 26);
             this.txtPrecioV.TabIndex = 44;
+            this.txtPrecioV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioV_KeyPress);
             // 
             // label4
             // 
@@ -250,7 +252,7 @@
             this.cmbUnidades.Name = "cmbUnidades";
             this.cmbUnidades.Size = new System.Drawing.Size(163, 28);
             this.cmbUnidades.TabIndex = 38;
-            
+            this.cmbUnidades.TabIndexChanged += new System.EventHandler(this.cmbUnidades_SelectedIndexChanged);
             // 
             // txtPrecioC
             // 
@@ -258,6 +260,7 @@
             this.txtPrecioC.Name = "txtPrecioC";
             this.txtPrecioC.Size = new System.Drawing.Size(163, 26);
             this.txtPrecioC.TabIndex = 37;
+            this.txtPrecioC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioC_KeyPress);
             // 
             // txtDescrip
             // 
@@ -266,6 +269,7 @@
             this.txtDescrip.Name = "txtDescrip";
             this.txtDescrip.Size = new System.Drawing.Size(292, 74);
             this.txtDescrip.TabIndex = 36;
+            this.txtDescrip.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescrip_KeyPress);
             // 
             // txtNombreProduc
             // 
@@ -273,6 +277,7 @@
             this.txtNombreProduc.Name = "txtNombreProduc";
             this.txtNombreProduc.Size = new System.Drawing.Size(292, 26);
             this.txtNombreProduc.TabIndex = 35;
+            this.txtNombreProduc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreProduc_KeyPress);
             // 
             // pictureBox1
             // 
@@ -300,6 +305,7 @@
             this.BtnGuardar.TabIndex = 51;
             this.BtnGuardar.Text = "Guardar";
             this.BtnGuardar.UseVisualStyleBackColor = false;
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // FrmProductos
             // 

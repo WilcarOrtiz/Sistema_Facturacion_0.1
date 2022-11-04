@@ -16,8 +16,6 @@ namespace Presentacion_GUI
     {
 
         Logica.FuncionesProductos funcionesProductos = new Logica.FuncionesProductos();
-        int fila;
-        DataTable Tabla; 
         public FrmProductos()
         {
             InitializeComponent();
@@ -25,9 +23,8 @@ namespace Presentacion_GUI
 
         private void FrmProductos_Load(object sender, EventArgs e)
         {
-            SeleccionUnidades();
-            CargarGrillaProductos();
-            
+            //SeleccionUnidades();
+            CargarGrillaProductos();  
         }
 
 
@@ -64,14 +61,14 @@ namespace Presentacion_GUI
             }
         }
 
-        public Boolean vacio2()
-        {
-            if (txtNombreProduc.Text == "" || txtPrecioC.Text == "" || txtCodigo.Text == "" || Cantidad.Value == 0 || txtPrecioV.Text == "")
-            {
-                return true;
-            }
-            return false;
-        }
+        //public Boolean vacio2()
+        //{
+        //    if (txtNombreProduc.Text == "" || txtPrecioC.Text == "" || txtCodigo.Text == "" || Cantidad.Value == 0 || txtPrecioV.Text == "")
+        //    {
+        //        return true;
+        //    }
+        //    return false;
+        //}
 
         private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -147,7 +144,7 @@ namespace Presentacion_GUI
 
         private void cmbUnidades_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Seleccion2();
+            SeleccionUnidades();
         }
 
         private void Cantidad_SelectedItemChanged(object sender, EventArgs e)
@@ -190,9 +187,10 @@ namespace Presentacion_GUI
             var Respuesta = funcionesProductos.AgregarProducto(Articulo);
             MessageBox.Show(Respuesta, "MESSAGE", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            switch (vacioP())
+            switch (vacioProductos())
             {
                 case true:
                     MessageBox.Show("Verifique los campos obligatorios", "VERIFICAR.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -204,6 +202,7 @@ namespace Presentacion_GUI
                     break;
             }
         }
+
         public void RestablecerProductos()
         {
             txtCodigo.Text = "";
@@ -216,7 +215,8 @@ namespace Presentacion_GUI
             cmbUnidades.Focus();
 
         }
-        public Boolean vacioP()
+
+        public Boolean vacioProductos()
         {
             if (txtCodigo.Text == "" || txtNombreProduc.Text == "" || txtDescrip.Text == "" || Cantidad.Value == 0
                 || cmbUnidades.Text == "" || txtPrecioC.Text == "" || txtPrecioV.Text == "")
@@ -225,6 +225,7 @@ namespace Presentacion_GUI
             }
             return false;
         }
+
         void CargarGrillaProductos()
         {
             GrillaProductos.Rows.Clear();
@@ -232,11 +233,6 @@ namespace Presentacion_GUI
             {
                 GrillaProductos.Rows.Add(item.Codigo, item.NombreProducto, item.Descripcion, item.Cantidad, item.Unidad, item.PrecioC, item.PrecioV);
             }
-        }
-
-        private void cmbUnidades_KeyDown(object sender, KeyEventArgs e)
-        {
-
         }
     }
 }
