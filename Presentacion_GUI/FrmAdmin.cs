@@ -512,7 +512,7 @@ namespace Presentacion_GUI
             GenerarPDF();
         }
 
-        //ACTUALIZACION PDF 
+        //GENERADOR DE PDF Y ACTUALIZACION DEL GIT 
         void GenerarPDF()
         {
             SaveFileDialog Guardar = new SaveFileDialog();
