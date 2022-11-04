@@ -17,7 +17,7 @@ namespace Presentacion_GUI
         Logica.FuncionesProductos FuncionesProductos = new Logica.FuncionesProductos();
         String Id;
         int CantidadI;
-        public FrmProductosEdit(FrmAdmin.Datos informacion)
+        public FrmProductosEdit(FrmVistaProductos.Datos informacion)
         {
             InitializeComponent();
             Id = informacion.ID;
@@ -40,7 +40,9 @@ namespace Presentacion_GUI
             return false;
         }
         void CapturarActualizacion()
-        {   String Cod = FuncionesProductos.ArticuloXId(Id);
+        {
+            MessageBox.Show(textCodigoEditar.Text);
+            String Cod = FuncionesProductos.ArticuloXId(Id);
             Producto Articulo = FuncionesProductos.ObtenerPorCodigo(Cod);
             String IdEdit = FuncionesProductos.IdXArticulo(textCodigoEditar.Text);
             if ((Id == IdEdit) || (FuncionesProductos.ObtenerPorCodigo(textCodigoEditar.Text) == null))
@@ -70,9 +72,15 @@ namespace Presentacion_GUI
             CapturarActualizacion();
             this.Close(); 
         }
+
         private void BtnCancelarEdit_Click(object sender, EventArgs e)
         {
             this.Close(); 
+        }
+
+        private void FrmProductosEdit_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

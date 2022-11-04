@@ -46,6 +46,7 @@
             // 
             // pbFoto
             // 
+            this.pbFoto.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.pbFoto.Dock = System.Windows.Forms.DockStyle.Left;
             this.pbFoto.Image = ((System.Drawing.Image)(resources.GetObject("pbFoto.Image")));
             this.pbFoto.Location = new System.Drawing.Point(0, 0);
@@ -119,7 +120,7 @@
             // 
             // btnAcceder
             // 
-            this.btnAcceder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnAcceder.BackColor = System.Drawing.Color.SeaGreen;
             this.btnAcceder.FlatAppearance.BorderSize = 0;
             this.btnAcceder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
             this.btnAcceder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;

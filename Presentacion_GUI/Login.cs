@@ -14,7 +14,8 @@ namespace Presentacion_GUI
 {
     public partial class Login : Form
     {
-        FuncionesUsuario funcionesUsuario = new FuncionesUsuario();   
+        FuncionesUsuario funcionesUsuario = new FuncionesUsuario();
+        FrmPrincipal frmPrincipal = new FrmPrincipal();
         public Login()
         {
             InitializeComponent();
@@ -103,13 +104,15 @@ namespace Presentacion_GUI
             {
                 String Usuario = txtUsuario.Text;
                 String Contraseña = txtContraseña.Text;
-                if (funcionesUsuario.Login(Usuario, Contraseña)==true)
+
+                if (funcionesUsuario.Login(Usuario, Contraseña) == true)
                 {
-                    MessageBox.Show("Entro");
+                    frmPrincipal.Show();
+                    
                 }
                 else
                 {
-                    MessageBox.Show("No entro");
+                    MessageBox.Show("Ususario incorrecto");
                 }
                 
             }

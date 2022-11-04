@@ -54,54 +54,60 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(44, 154);
+            this.label10.Location = new System.Drawing.Point(66, 237);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 13);
+            this.label10.Size = new System.Drawing.Size(60, 20);
             this.label10.TabIndex = 49;
             this.label10.Text = "Unidad";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(44, 91);
+            this.label11.Location = new System.Drawing.Point(66, 140);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(63, 13);
+            this.label11.Size = new System.Drawing.Size(92, 20);
             this.label11.TabIndex = 48;
             this.label11.Text = "Descripcion";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(169, 207);
+            this.label12.Location = new System.Drawing.Point(254, 318);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(83, 13);
+            this.label12.Size = new System.Drawing.Size(122, 20);
             this.label12.TabIndex = 46;
             this.label12.Text = "Precio de Venta";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(44, 207);
+            this.label13.Location = new System.Drawing.Point(66, 318);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(91, 13);
+            this.label13.Size = new System.Drawing.Size(135, 20);
             this.label13.TabIndex = 45;
             this.label13.Text = "Precio de Compra";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(44, 42);
+            this.label14.Location = new System.Drawing.Point(66, 65);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(44, 13);
+            this.label14.Size = new System.Drawing.Size(65, 20);
             this.label14.TabIndex = 44;
             this.label14.Text = "Nombre";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(184, 152);
+            this.label15.Location = new System.Drawing.Point(276, 234);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(40, 13);
+            this.label15.Size = new System.Drawing.Size(59, 20);
             this.label15.TabIndex = 43;
             this.label15.Text = "Codigo";
             // 
@@ -114,74 +120,73 @@
             "UNIDAD",
             "CAJA (24 Unds)",
             "CANASTA (30 Unds)"});
-            this.cmbUnidadesEdit.Location = new System.Drawing.Point(47, 169);
-            this.cmbUnidadesEdit.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbUnidadesEdit.Location = new System.Drawing.Point(70, 260);
             this.cmbUnidadesEdit.Name = "cmbUnidadesEdit";
-            this.cmbUnidadesEdit.Size = new System.Drawing.Size(110, 21);
+            this.cmbUnidadesEdit.Size = new System.Drawing.Size(163, 28);
             this.cmbUnidadesEdit.TabIndex = 41;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(41, 300);
+            this.label16.Location = new System.Drawing.Point(62, 462);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(109, 13);
+            this.label16.Size = new System.Drawing.Size(161, 20);
             this.label16.TabIndex = 50;
             this.label16.Text = "Cantidad en bodega: ";
             // 
             // CantidadEdit
             // 
-            this.CantidadEdit.Location = new System.Drawing.Point(172, 266);
+            this.CantidadEdit.Location = new System.Drawing.Point(258, 409);
+            this.CantidadEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CantidadEdit.Name = "CantidadEdit";
-            this.CantidadEdit.Size = new System.Drawing.Size(59, 20);
+            this.CantidadEdit.Size = new System.Drawing.Size(88, 26);
             this.CantidadEdit.TabIndex = 51;
             // 
             // textCodigoEditar
             // 
-            this.textCodigoEditar.Location = new System.Drawing.Point(187, 169);
+            this.textCodigoEditar.Location = new System.Drawing.Point(280, 260);
+            this.textCodigoEditar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textCodigoEditar.Name = "textCodigoEditar";
-            this.textCodigoEditar.Size = new System.Drawing.Size(65, 20);
+            this.textCodigoEditar.Size = new System.Drawing.Size(96, 26);
             this.textCodigoEditar.TabIndex = 53;
             // 
             // txtPrecioVEdit
             // 
-            this.txtPrecioVEdit.Location = new System.Drawing.Point(171, 225);
-            this.txtPrecioVEdit.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPrecioVEdit.Location = new System.Drawing.Point(256, 346);
             this.txtPrecioVEdit.Name = "txtPrecioVEdit";
-            this.txtPrecioVEdit.Size = new System.Drawing.Size(80, 20);
+            this.txtPrecioVEdit.Size = new System.Drawing.Size(118, 26);
             this.txtPrecioVEdit.TabIndex = 47;
             // 
             // txtPrecioCEdit
             // 
-            this.txtPrecioCEdit.Location = new System.Drawing.Point(46, 225);
-            this.txtPrecioCEdit.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPrecioCEdit.Location = new System.Drawing.Point(69, 346);
             this.txtPrecioCEdit.Name = "txtPrecioCEdit";
-            this.txtPrecioCEdit.Size = new System.Drawing.Size(110, 20);
+            this.txtPrecioCEdit.Size = new System.Drawing.Size(163, 26);
             this.txtPrecioCEdit.TabIndex = 40;
             // 
             // txtNombreProducEditar
             // 
-            this.txtNombreProducEditar.Location = new System.Drawing.Point(47, 56);
-            this.txtNombreProducEditar.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombreProducEditar.Location = new System.Drawing.Point(70, 86);
             this.txtNombreProducEditar.Name = "txtNombreProducEditar";
-            this.txtNombreProducEditar.Size = new System.Drawing.Size(205, 20);
+            this.txtNombreProducEditar.Size = new System.Drawing.Size(306, 26);
             this.txtNombreProducEditar.TabIndex = 38;
             // 
             // txtDescripEditar
             // 
-            this.txtDescripEditar.Location = new System.Drawing.Point(47, 106);
-            this.txtDescripEditar.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDescripEditar.Location = new System.Drawing.Point(70, 163);
             this.txtDescripEditar.Multiline = true;
             this.txtDescripEditar.Name = "txtDescripEditar";
-            this.txtDescripEditar.Size = new System.Drawing.Size(205, 35);
+            this.txtDescripEditar.Size = new System.Drawing.Size(306, 52);
             this.txtDescripEditar.TabIndex = 39;
             // 
             // BtnGuardarEdit
             // 
             this.BtnGuardarEdit.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BtnGuardarEdit.Location = new System.Drawing.Point(46, 364);
+            this.BtnGuardarEdit.Location = new System.Drawing.Point(69, 560);
+            this.BtnGuardarEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnGuardarEdit.Name = "BtnGuardarEdit";
-            this.BtnGuardarEdit.Size = new System.Drawing.Size(79, 50);
+            this.BtnGuardarEdit.Size = new System.Drawing.Size(118, 77);
             this.BtnGuardarEdit.TabIndex = 55;
             this.BtnGuardarEdit.TabStop = false;
             this.BtnGuardarEdit.Click += new System.EventHandler(this.BtnGuardarEdit_Click);
@@ -189,9 +194,10 @@
             // BtnCancelarEdit
             // 
             this.BtnCancelarEdit.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.BtnCancelarEdit.Location = new System.Drawing.Point(172, 364);
+            this.BtnCancelarEdit.Location = new System.Drawing.Point(258, 560);
+            this.BtnCancelarEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnCancelarEdit.Name = "BtnCancelarEdit";
-            this.BtnCancelarEdit.Size = new System.Drawing.Size(100, 50);
+            this.BtnCancelarEdit.Size = new System.Drawing.Size(150, 77);
             this.BtnCancelarEdit.TabIndex = 56;
             this.BtnCancelarEdit.TabStop = false;
             this.BtnCancelarEdit.Click += new System.EventHandler(this.BtnCancelarEdit_Click);
@@ -199,25 +205,27 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(43, 268);
+            this.label1.Location = new System.Drawing.Point(64, 412);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 13);
+            this.label1.Size = new System.Drawing.Size(158, 20);
             this.label1.TabIndex = 57;
             this.label1.Text = "Cantidad a adicionar:";
             // 
             // CantidadInicial
             // 
             this.CantidadInicial.AutoSize = true;
-            this.CantidadInicial.Location = new System.Drawing.Point(169, 300);
+            this.CantidadInicial.Location = new System.Drawing.Point(254, 462);
+            this.CantidadInicial.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CantidadInicial.Name = "CantidadInicial";
-            this.CantidadInicial.Size = new System.Drawing.Size(0, 13);
+            this.CantidadInicial.Size = new System.Drawing.Size(0, 20);
             this.CantidadInicial.TabIndex = 58;
             // 
             // FrmProductosEdit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(310, 459);
+            this.ClientSize = new System.Drawing.Size(465, 706);
             this.Controls.Add(this.CantidadInicial);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnCancelarEdit);
@@ -236,8 +244,10 @@
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.cmbUnidadesEdit);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmProductosEdit";
             this.Text = "FrmProductosEdit";
+            this.Load += new System.EventHandler(this.FrmProductosEdit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.CantidadEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnGuardarEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCancelarEdit)).EndInit();
