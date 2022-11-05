@@ -7,7 +7,7 @@ using Entitades;
 
 namespace Logica
 {
-    internal class FuncionesCliente : IServiciosPersona<Cliente>
+    internal class FuncionesCliente 
     {
         public string Agregar(Empleado persona)
         {

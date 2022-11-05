@@ -316,28 +316,23 @@ namespace Presentacion_GUI
             }
         }
 
-        //private void txtContraseña_Enter(object sender, EventArgs e)
-        //{
-        //    if (txtContraseña.Text == "Contraseña")
-        //    {
-        //        txtContraseña.Clear();
-        //    };
-        //}
-
-        //private void txtContraseña_Leave(object sender, EventArgs e)
-        //{
-        //    if (txtContraseña.Text == "")
-        //    {
-        //        txtContraseña.Text= "Contraseña";
-        //    };
-        //}
-
         private void btnCrearUsuario_Click(object sender, EventArgs e)
         {
-            CrudUsuario usuario = new CrudUsuario();
-
+            CrudUsuario usuario = new CrudUsuario();     
+            
             usuario.ShowDialog();
 
         }
+
+        public Empleado DatosUsuario()
+        {
+            var empleado = new Empleado();  
+            
+            empleado.Cedula = txtCedula.Text;   
+            
+            return empleado;
+        }
+
+        
     }
 }

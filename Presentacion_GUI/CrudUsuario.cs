@@ -1,4 +1,5 @@
 ﻿using Entitades;
+using Logica;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,7 @@ namespace Presentacion_GUI
 {
     public partial class CrudUsuario : Form
     {
+        FuncionesUsuario funcionesUsuario = new FuncionesUsuario();
         
         public CrudUsuario()
         {
@@ -41,17 +43,22 @@ namespace Presentacion_GUI
 
         public void CrearUsuario()
         {
+            FrmPersonal frmPersonal = new FrmPersonal();
             Usuario usuario = new Usuario();
-            usuario.Contraseña = txtContraseña.Text;
-            usuario.NombreUser = txtUsusario.Text; 
+            var empleado = new Empleado();
+            empleado = frmPersonal.DatosUsuario();
 
-            FrmPersonal frmPersonal = new FrmPersonal();    
-            usuario.Nombre = frmPersonal.
+            usuario.Cedula = empleado.Cedula;
+            usuario.Contraseña = txtContraseña.Text;
+            usuario.NombreUser = txtUsuario.Text;
+
+            funcionesUsuario.Agregar(usuario);
+         
         }
 
         public Boolean vacio()
         {
-            if (txtContraseña.Text=="" || txtContraseña.Text == "Contraseña" || txtUsusario.Text =="" || txtUsusario.Text=="Usuario")
+            if (txtContraseña.Text=="" || txtContraseña.Text == "Contraseña" || txtUsuario.Text =="" || txtUsuario.Text=="Usuario")
             {
                 return true;
             }
@@ -63,8 +70,25 @@ namespace Presentacion_GUI
 
         public void Restablecer()
         {
-            txtUsusario.Text = "";
+            txtUsuario.Text = "";
             txtContraseña.Text = "";
+        }
+
+        private void txtContraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+          
+                if (e.KeyChar == Convert.ToChar(Keys.Enter))
+                {
+                    if (txtUsuario.TextLength < 5)
+                    {
+                        MessageBox.Show("La longitud de la contraseña es muy corta...", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    }
+                    else
+                    {
+                        btnCrear.Focus();
+                    }
+                }
+            
         }
     }
 }

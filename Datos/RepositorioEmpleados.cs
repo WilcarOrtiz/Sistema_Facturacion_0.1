@@ -51,5 +51,18 @@ namespace Datos
             
             
         }
+
+        public string Actualizar(List<Empleado> empleado, bool Modo)
+        {
+
+            var sw = new StreamWriter(ruta, Modo);
+            foreach (var item in empleado)
+            {
+                sw.WriteLine(item.ToString());
+            }
+            sw.Close();
+            return "Correcto";
+
+        }
     }
 }

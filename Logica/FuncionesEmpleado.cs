@@ -33,12 +33,12 @@ namespace Logica
             return Mensaje;
         }
 
-        public string Editar(Persona persona)
+        public string Editar(Empleado persona)
         {
             throw new NotImplementedException();
         }
 
-        public string Eliminar(Persona persona)
+        public string Eliminar(Empleado persona)
         {
             throw new NotImplementedException();
         }

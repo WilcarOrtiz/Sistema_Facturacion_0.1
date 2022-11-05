@@ -17,18 +17,29 @@ namespace Logica
         {
             usuarios = new List<Usuario>();
             usuarios = repositorioUsuario.GetAll();
-        }
-        public string Agregar(Empleado persona)
+        } 
+
+        public string Agregar(Usuario persona)
         {
-            throw new NotImplementedException();
+            String Mensaje;
+            try
+            {
+                usuarios.Add(persona);
+                Mensaje = repositorioUsuario.GuardarEmpleado(persona);
+            }
+            catch (Exception EX)
+            {
+                Mensaje = " " + EX;
+            }
+            return Mensaje;
         }
 
-        public string Editar(Persona persona)
+        public string Editar(Usuario persona)
         {
             throw new NotImplementedException();
-        }
+        }     
 
-        public string Eliminar(Persona persona)
+        public string Eliminar(Usuario persona)
         {
             throw new NotImplementedException();
         }

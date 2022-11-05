@@ -30,17 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPersonal));
             this.gbIngreso = new System.Windows.Forms.GroupBox();
-            this.pbGuardarPersonal = new System.Windows.Forms.PictureBox();
-            this.cmbCargos = new System.Windows.Forms.ComboBox();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.txtApellidos = new System.Windows.Forms.TextBox();
+            this.pbGuardarPersonal = new System.Windows.Forms.PictureBox();
             this.txtNombres = new System.Windows.Forms.TextBox();
-            this.txtCedula = new System.Windows.Forms.TextBox();
             this.pbFotoEmpleado = new System.Windows.Forms.PictureBox();
+            this.cmbCargos = new System.Windows.Forms.ComboBox();
+            this.txtCedula = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.gbLista = new System.Windows.Forms.GroupBox();
             this.dgListaEmpleados = new System.Windows.Forms.DataGridView();
-            this.btnCrearUsuario = new System.Windows.Forms.Button();
             this.gbIngreso.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbGuardarPersonal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotoEmpleado)).BeginInit();
@@ -50,15 +49,14 @@
             // 
             // gbIngreso
             // 
-            this.gbIngreso.Controls.Add(this.btnCrearUsuario);
-            this.gbIngreso.Controls.Add(this.pbGuardarPersonal);
-            this.gbIngreso.Controls.Add(this.cmbCargos);
-            this.gbIngreso.Controls.Add(this.txtTelefono);
             this.gbIngreso.Controls.Add(this.txtCorreo);
             this.gbIngreso.Controls.Add(this.txtApellidos);
+            this.gbIngreso.Controls.Add(this.pbGuardarPersonal);
             this.gbIngreso.Controls.Add(this.txtNombres);
-            this.gbIngreso.Controls.Add(this.txtCedula);
             this.gbIngreso.Controls.Add(this.pbFotoEmpleado);
+            this.gbIngreso.Controls.Add(this.cmbCargos);
+            this.gbIngreso.Controls.Add(this.txtCedula);
+            this.gbIngreso.Controls.Add(this.txtTelefono);
             this.gbIngreso.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.gbIngreso.Location = new System.Drawing.Point(52, 44);
             this.gbIngreso.Name = "gbIngreso";
@@ -66,6 +64,28 @@
             this.gbIngreso.TabIndex = 1;
             this.gbIngreso.TabStop = false;
             this.gbIngreso.Text = "Ingreso";
+            // 
+            // txtCorreo
+            // 
+            this.txtCorreo.Location = new System.Drawing.Point(116, 447);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(228, 26);
+            this.txtCorreo.TabIndex = 4;
+            this.txtCorreo.Text = "Correo";
+            this.txtCorreo.Enter += new System.EventHandler(this.txtCorreo_Enter);
+            this.txtCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCorreo_KeyPress);
+            this.txtCorreo.Leave += new System.EventHandler(this.txtCorreo_Leave);
+            // 
+            // txtApellidos
+            // 
+            this.txtApellidos.Location = new System.Drawing.Point(116, 344);
+            this.txtApellidos.Name = "txtApellidos";
+            this.txtApellidos.Size = new System.Drawing.Size(228, 26);
+            this.txtApellidos.TabIndex = 3;
+            this.txtApellidos.Text = "Apellidos";
+            this.txtApellidos.Enter += new System.EventHandler(this.txtApellidos_Enter);
+            this.txtApellidos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellidos_KeyPress);
+            this.txtApellidos.Leave += new System.EventHandler(this.txtApellidos_Leave);
             // 
             // pbGuardarPersonal
             // 
@@ -79,59 +99,9 @@
             this.pbGuardarPersonal.TabStop = false;
             this.pbGuardarPersonal.Click += new System.EventHandler(this.pbGuardarPersonal_Click);
             // 
-            // cmbCargos
-            // 
-            this.cmbCargos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbCargos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCargos.FormattingEnabled = true;
-            this.cmbCargos.Items.AddRange(new object[] {
-            "VENDEDOR",
-            "SEGURIDAD",
-            "LIMPIEZA",
-            "MESERO(A)"});
-            this.cmbCargos.Location = new System.Drawing.Point(124, 171);
-            this.cmbCargos.Name = "cmbCargos";
-            this.cmbCargos.Size = new System.Drawing.Size(228, 28);
-            this.cmbCargos.TabIndex = 6;
-            this.cmbCargos.TabIndexChanged += new System.EventHandler(this.cmbCargos_SelectedIndexChanged);
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.Location = new System.Drawing.Point(124, 377);
-            this.txtTelefono.MaxLength = 10;
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(228, 26);
-            this.txtTelefono.TabIndex = 5;
-            this.txtTelefono.Text = "Telefono";
-            this.txtTelefono.Enter += new System.EventHandler(this.txtTelefono_Enter);
-            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
-            this.txtTelefono.Leave += new System.EventHandler(this.txtTelefono_Leave);
-            // 
-            // txtCorreo
-            // 
-            this.txtCorreo.Location = new System.Drawing.Point(124, 431);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(228, 26);
-            this.txtCorreo.TabIndex = 4;
-            this.txtCorreo.Text = "Correo";
-            this.txtCorreo.Enter += new System.EventHandler(this.txtCorreo_Enter);
-            this.txtCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCorreo_KeyPress);
-            this.txtCorreo.Leave += new System.EventHandler(this.txtCorreo_Leave);
-            // 
-            // txtApellidos
-            // 
-            this.txtApellidos.Location = new System.Drawing.Point(124, 328);
-            this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.Size = new System.Drawing.Size(228, 26);
-            this.txtApellidos.TabIndex = 3;
-            this.txtApellidos.Text = "Apellidos";
-            this.txtApellidos.Enter += new System.EventHandler(this.txtApellidos_Enter);
-            this.txtApellidos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellidos_KeyPress);
-            this.txtApellidos.Leave += new System.EventHandler(this.txtApellidos_Leave);
-            // 
             // txtNombres
             // 
-            this.txtNombres.Location = new System.Drawing.Point(124, 275);
+            this.txtNombres.Location = new System.Drawing.Point(116, 291);
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(228, 26);
             this.txtNombres.TabIndex = 2;
@@ -139,18 +109,6 @@
             this.txtNombres.Enter += new System.EventHandler(this.txtNombres_Enter);
             this.txtNombres.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombres_KeyPress);
             this.txtNombres.Leave += new System.EventHandler(this.txtNombres_Leave);
-            // 
-            // txtCedula
-            // 
-            this.txtCedula.Location = new System.Drawing.Point(124, 222);
-            this.txtCedula.MaxLength = 10;
-            this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(228, 26);
-            this.txtCedula.TabIndex = 1;
-            this.txtCedula.Text = "Cedula";
-            this.txtCedula.Enter += new System.EventHandler(this.txtCedula_Enter);
-            this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
-            this.txtCedula.Leave += new System.EventHandler(this.txtCedula_Leave);
             // 
             // pbFotoEmpleado
             // 
@@ -162,6 +120,46 @@
             this.pbFotoEmpleado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pbFotoEmpleado.TabIndex = 0;
             this.pbFotoEmpleado.TabStop = false;
+            // 
+            // cmbCargos
+            // 
+            this.cmbCargos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbCargos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCargos.FormattingEnabled = true;
+            this.cmbCargos.Items.AddRange(new object[] {
+            "VENDEDOR",
+            "SEGURIDAD",
+            "LIMPIEZA",
+            "MESERO(A)"});
+            this.cmbCargos.Location = new System.Drawing.Point(116, 187);
+            this.cmbCargos.Name = "cmbCargos";
+            this.cmbCargos.Size = new System.Drawing.Size(228, 28);
+            this.cmbCargos.TabIndex = 6;
+            this.cmbCargos.TabIndexChanged += new System.EventHandler(this.cmbCargos_SelectedIndexChanged);
+            // 
+            // txtCedula
+            // 
+            this.txtCedula.Location = new System.Drawing.Point(116, 238);
+            this.txtCedula.MaxLength = 10;
+            this.txtCedula.Name = "txtCedula";
+            this.txtCedula.Size = new System.Drawing.Size(228, 26);
+            this.txtCedula.TabIndex = 1;
+            this.txtCedula.Text = "Cedula";
+            this.txtCedula.Enter += new System.EventHandler(this.txtCedula_Enter);
+            this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
+            this.txtCedula.Leave += new System.EventHandler(this.txtCedula_Leave);
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.Location = new System.Drawing.Point(116, 393);
+            this.txtTelefono.MaxLength = 10;
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(228, 26);
+            this.txtTelefono.TabIndex = 5;
+            this.txtTelefono.Text = "Telefono";
+            this.txtTelefono.Enter += new System.EventHandler(this.txtTelefono_Enter);
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
+            this.txtTelefono.Leave += new System.EventHandler(this.txtTelefono_Leave);
             // 
             // gbLista
             // 
@@ -182,16 +180,6 @@
             this.dgListaEmpleados.RowTemplate.Height = 28;
             this.dgListaEmpleados.Size = new System.Drawing.Size(474, 585);
             this.dgListaEmpleados.TabIndex = 0;
-            // 
-            // btnCrearUsuario
-            // 
-            this.btnCrearUsuario.Location = new System.Drawing.Point(46, 538);
-            this.btnCrearUsuario.Name = "btnCrearUsuario";
-            this.btnCrearUsuario.Size = new System.Drawing.Size(129, 62);
-            this.btnCrearUsuario.TabIndex = 9;
-            this.btnCrearUsuario.Text = "Crear Usuario";
-            this.btnCrearUsuario.UseVisualStyleBackColor = true;
-            this.btnCrearUsuario.Click += new System.EventHandler(this.btnCrearUsuario_Click);
             // 
             // FrmPersonal
             // 
@@ -228,6 +216,5 @@
         private System.Windows.Forms.PictureBox pbFotoEmpleado;
         private System.Windows.Forms.GroupBox gbLista;
         private System.Windows.Forms.DataGridView dgListaEmpleados;
-        private System.Windows.Forms.Button btnCrearUsuario;
     }
 }

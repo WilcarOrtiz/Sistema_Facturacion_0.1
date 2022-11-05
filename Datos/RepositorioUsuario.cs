@@ -27,12 +27,24 @@ namespace Datos
             return usuarios;
         }
 
-        Entitades.Usuario Mappear(String linea)
+        Usuario Mappear(String linea)
         {
-            var Usuarios = new Entitades.Usuario();
-            Usuarios.NombreUser = linea.Split(';')[0] ;
-            Usuarios.Contraseña = linea.Split(';')[1];
-            return Usuarios;
+            try
+            {
+                var Usuarios = new Usuario();
+                Usuarios.NombreUser = linea.Split(';')[0];
+                Usuarios.Contraseña = linea.Split(';')[1];              
+                Usuarios.Cedula = linea.Split(';')[2];
+                
+                return Usuarios;
+            }
+            catch (Exception)
+            {
+
+                return null;
+
+            }
+            
         }
     }
 }

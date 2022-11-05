@@ -15,7 +15,7 @@ namespace Entitades
 
         public override string ToString()
         {
-            return NombreUser+";"+Contraseña ;
+            return NombreUser + ";" + Contraseña + ";" + Cedula ;
         }
     }
 }

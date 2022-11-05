@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 namespace Logica
 {
     public interface IServiciosPersona<T>
-    {
-        String Agregar(Empleado persona);
+    { 
+        String Agregar(T persona);
 
-        String Editar(Persona persona);
+        String Editar(T persona);
 
         List<T> GetAllUsuarios();
 
-        String Eliminar(Persona persona);
+        String Eliminar(T persona);
 
 
     }
