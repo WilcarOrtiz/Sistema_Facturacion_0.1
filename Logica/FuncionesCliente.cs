@@ -9,7 +9,7 @@ namespace Logica
 {
     internal class FuncionesCliente : IServiciosPersona<Cliente>
     {
-        public string Agregar(Persona persona)
+        public string Agregar(Empleado persona)
         {
             throw new NotImplementedException();
         }

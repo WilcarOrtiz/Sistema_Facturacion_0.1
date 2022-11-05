@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Entitades;
+using Logica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,7 @@ namespace Presentacion_GUI
 {
     public partial class FrmPersonal : Form
     {
+        FuncionesEmpleado funcionesEmpleado = new FuncionesEmpleado();
         public FrmPersonal()
         {
             InitializeComponent();
@@ -109,7 +112,7 @@ namespace Presentacion_GUI
                 }
                 else
                 {
-                    txtContraseña.Focus();
+                    //txtContraseña.Focus();
                 }
             }
         }
@@ -142,7 +145,7 @@ namespace Presentacion_GUI
             txtApellidos.Text = "Apellidos";
             txtTelefono.Text = "Telefono";
             txtCorreo.Text = "Correo";
-            txtContraseña.Text = "Contraseña";
+            //txtContraseña.Text = "Contraseña";
             cmbCargos.SelectedIndex = -1;
         }
 
@@ -158,7 +161,7 @@ namespace Presentacion_GUI
 
                 if (cmbCargos.Text == "VENDEDOR")
                 {
-                    txtContraseña.Enabled = true;
+                    //txtContraseña.Enabled = true;
                 }
 
             }
@@ -169,7 +172,7 @@ namespace Presentacion_GUI
             txtApellidos.Enabled = false;
             txtTelefono.Enabled = false;
             txtCedula.Enabled = false;
-            txtContraseña.Enabled = false;
+            //txtContraseña.Enabled = false;
             txtCorreo.Enabled = false;
             txtNombres.Enabled = false;
         }
@@ -181,56 +184,8 @@ namespace Presentacion_GUI
             txtCedula.Enabled = true;
             txtCorreo.Enabled = true;
             txtNombres.Enabled = true;
-            txtContraseña.Enabled = false;
+            //txtContraseña.Enabled = false;
         }
-
-       //private void txtCedula_Click(object sender, EventArgs e)
-       // {
-       //     if (txtCedula.Text == "Cedula")
-       //     {
-       //         txtCedula.Clear();
-       //     }
-       // }
-
-        //private void txtNombres_Click(object sender, EventArgs e)
-        //{
-        //    if (txtNombres.Text == "Nombres")
-        //    {
-        //        txtNombres.Clear();
-        //    }
-        //}
-
-        //private void txtApellidos_Click(object sender, EventArgs e)
-        //{
-        //    if (txtApellidos.Text == "Apellidos")
-        //    {
-        //        txtApellidos.Clear();
-        //    }
-        //}
-
-        //private void txtTelefono_Click(object sender, EventArgs e)
-        //{
-        //    if (txtTelefono.Text == "Telefono")
-        //    {
-        //        txtTelefono.Clear();
-        //    }
-        //}
-
-        //private void txtCorreo_Click(object sender, EventArgs e)
-        //{
-        //    if (txtCorreo.Text == "Correo")
-        //    {
-        //        txtCorreo.Clear();
-        //    }
-        //}
-
-        //private void txtContraseña_Click(object sender, EventArgs e)
-        //{
-        //    if (txtContraseña.Text == "Contraseña")
-        //    {
-        //        txtContraseña.Clear();
-        //    };
-        //}
 
         private void pbGuardarPersonal_Click(object sender, EventArgs e)
         {
@@ -241,15 +196,35 @@ namespace Presentacion_GUI
                     break;
 
                 case false:
+
+                    GuardarPersonal();
                     Restablecer();
                     break;
             }
         }
 
+        public void GuardarPersonal()
+        {
+            Empleado empleado = new Empleado();
+
+            empleado.Cargo    = cmbCargos.Text;
+            empleado.Cedula   = txtCedula.Text;
+            empleado.Nombre   = txtNombres.Text;
+            empleado.Apellido = txtApellidos.Text;
+            empleado.Correo   = txtCorreo.Text;
+            empleado.Telefono = txtTelefono.Text;
+
+            var resp = funcionesEmpleado.Agregar(empleado);
+
+            MessageBox.Show(resp);
+        }
+
         public Boolean vacio()
         {
-            if (txtContraseña.Text == "" || txtCedula.Text == "" || txtApellidos.Text == "" ||
-                txtNombres.Text == "" || txtTelefono.Text == "" || txtCorreo.Text == "")
+            if ( /* txtContraseña.Text == "" || */ txtCedula.Text == "" || txtApellidos.Text == "" ||
+                txtNombres.Text == "" || txtTelefono.Text == "" || txtCorreo.Text == "" /* || 
+                txtContraseña.Text == "Contraseña" */ || txtCedula.Text == "Cedula" || txtApellidos.Text == "Apellido" ||
+                txtNombres.Text == "Nombres" || txtTelefono.Text == "Telefono" || txtCorreo.Text == "Correo")
             {
                 return true;
             }
@@ -287,7 +262,7 @@ namespace Presentacion_GUI
 
         private void txtNombres_Leave(object sender, EventArgs e)
         {
-            if (txtNombres.Text == "Nombres")
+            if (txtNombres.Text == "")
             {
                 txtNombres.Text = "Nombres";
             }
@@ -341,20 +316,28 @@ namespace Presentacion_GUI
             }
         }
 
-        private void txtContraseña_Enter(object sender, EventArgs e)
-        {
-            if (txtContraseña.Text == "Contraseña")
-            {
-                txtContraseña.Clear();
-            };
-        }
+        //private void txtContraseña_Enter(object sender, EventArgs e)
+        //{
+        //    if (txtContraseña.Text == "Contraseña")
+        //    {
+        //        txtContraseña.Clear();
+        //    };
+        //}
 
-        private void txtContraseña_Leave(object sender, EventArgs e)
+        //private void txtContraseña_Leave(object sender, EventArgs e)
+        //{
+        //    if (txtContraseña.Text == "")
+        //    {
+        //        txtContraseña.Text= "Contraseña";
+        //    };
+        //}
+
+        private void btnCrearUsuario_Click(object sender, EventArgs e)
         {
-            if (txtContraseña.Text == "")
-            {
-                txtContraseña.Text= "Contraseña";
-            };
+            CrudUsuario usuario = new CrudUsuario();
+
+            usuario.ShowDialog();
+
         }
     }
 }

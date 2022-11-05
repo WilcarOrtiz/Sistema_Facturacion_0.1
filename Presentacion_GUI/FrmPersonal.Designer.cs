@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPersonal));
             this.gbIngreso = new System.Windows.Forms.GroupBox();
             this.pbGuardarPersonal = new System.Windows.Forms.PictureBox();
-            this.txtContraseña = new System.Windows.Forms.TextBox();
             this.cmbCargos = new System.Windows.Forms.ComboBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
@@ -41,6 +40,7 @@
             this.pbFotoEmpleado = new System.Windows.Forms.PictureBox();
             this.gbLista = new System.Windows.Forms.GroupBox();
             this.dgListaEmpleados = new System.Windows.Forms.DataGridView();
+            this.btnCrearUsuario = new System.Windows.Forms.Button();
             this.gbIngreso.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbGuardarPersonal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotoEmpleado)).BeginInit();
@@ -50,8 +50,8 @@
             // 
             // gbIngreso
             // 
+            this.gbIngreso.Controls.Add(this.btnCrearUsuario);
             this.gbIngreso.Controls.Add(this.pbGuardarPersonal);
-            this.gbIngreso.Controls.Add(this.txtContraseña);
             this.gbIngreso.Controls.Add(this.cmbCargos);
             this.gbIngreso.Controls.Add(this.txtTelefono);
             this.gbIngreso.Controls.Add(this.txtCorreo);
@@ -78,17 +78,6 @@
             this.pbGuardarPersonal.TabIndex = 8;
             this.pbGuardarPersonal.TabStop = false;
             this.pbGuardarPersonal.Click += new System.EventHandler(this.pbGuardarPersonal_Click);
-            // 
-            // txtContraseña
-            // 
-            this.txtContraseña.Location = new System.Drawing.Point(124, 485);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(228, 26);
-            this.txtContraseña.TabIndex = 7;
-            this.txtContraseña.Text = "Contraseña";
-            this.txtContraseña.Enter += new System.EventHandler(this.txtContraseña_Enter);
-            this.txtContraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContraseña_KeyPress);
-            this.txtContraseña.Leave += new System.EventHandler(this.txtContraseña_Leave);
             // 
             // cmbCargos
             // 
@@ -187,12 +176,22 @@
             // dgListaEmpleados
             // 
             this.dgListaEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgListaEmpleados.Location = new System.Drawing.Point(33, 31);
+            this.dgListaEmpleados.Location = new System.Drawing.Point(31, 25);
             this.dgListaEmpleados.Name = "dgListaEmpleados";
             this.dgListaEmpleados.RowHeadersWidth = 62;
             this.dgListaEmpleados.RowTemplate.Height = 28;
             this.dgListaEmpleados.Size = new System.Drawing.Size(474, 585);
             this.dgListaEmpleados.TabIndex = 0;
+            // 
+            // btnCrearUsuario
+            // 
+            this.btnCrearUsuario.Location = new System.Drawing.Point(46, 538);
+            this.btnCrearUsuario.Name = "btnCrearUsuario";
+            this.btnCrearUsuario.Size = new System.Drawing.Size(129, 62);
+            this.btnCrearUsuario.TabIndex = 9;
+            this.btnCrearUsuario.Text = "Crear Usuario";
+            this.btnCrearUsuario.UseVisualStyleBackColor = true;
+            this.btnCrearUsuario.Click += new System.EventHandler(this.btnCrearUsuario_Click);
             // 
             // FrmPersonal
             // 
@@ -220,7 +219,6 @@
 
         private System.Windows.Forms.GroupBox gbIngreso;
         private System.Windows.Forms.PictureBox pbGuardarPersonal;
-        private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.ComboBox cmbCargos;
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.TextBox txtCorreo;
@@ -230,5 +228,6 @@
         private System.Windows.Forms.PictureBox pbFotoEmpleado;
         private System.Windows.Forms.GroupBox gbLista;
         private System.Windows.Forms.DataGridView dgListaEmpleados;
+        private System.Windows.Forms.Button btnCrearUsuario;
     }
 }

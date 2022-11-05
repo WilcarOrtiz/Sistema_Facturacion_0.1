@@ -21,12 +21,29 @@ namespace Datos
             ruta= FileName;
         }
 
-        public String GuardarPersona(Entitades.Usuario Persona)
+        public String GuardarEmpleado(Entitades.Empleado Persona)
         {
             StreamWriter sw = new StreamWriter(ruta, true);
             sw.WriteLine(Persona.ToString());
             sw.Close();
             return "Correcto";
         }
+
+        public String GuardarClientes(Entitades.Cliente Persona)
+        {
+            StreamWriter sw = new StreamWriter(ruta, true);
+            sw.WriteLine(Persona.ToString());
+            sw.Close();
+            return "Correcto";
+        }
+
+        public String GuardarUsuario(Entitades.Usuario Persona)
+        {
+            StreamWriter sw = new StreamWriter(ruta, true);
+            sw.WriteLine(Persona.ToString());
+            sw.Close();
+            return "Correcto";
+        }
+
     }
 }

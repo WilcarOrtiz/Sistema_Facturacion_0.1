@@ -18,7 +18,7 @@ namespace Logica
             usuarios = new List<Usuario>();
             usuarios = repositorioUsuario.GetAll();
         }
-        public string Agregar(Persona persona)
+        public string Agregar(Empleado persona)
         {
             throw new NotImplementedException();
         }

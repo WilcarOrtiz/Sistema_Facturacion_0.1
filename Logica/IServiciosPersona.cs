@@ -9,7 +9,7 @@ namespace Logica
 {
     public interface IServiciosPersona<T>
     {
-        String Agregar(Persona persona);
+        String Agregar(Empleado persona);
 
         String Editar(Persona persona);
 
