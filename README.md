@@ -33,28 +33,18 @@
 
 El proyecto está organizado en 4 capas principales siguiendo el patrón de arquitectura en capas:
 
-\`\`\`
-Sistema_Facturacion_0.1/
-│
-├── 📦 Presentacion_GUI/          # Capa de Presentación
-│   └── Interfaz gráfica (Windows Forms)
-│
-├── 📦 Logica/                    # Capa de Lógica de Negocio
-│   └── Reglas de negocio y procesos
-│
-├── 📦 Datos/                     # Capa de Acceso a Datos
-│   └── Conexión y operaciones con BD
-│
-├── 📦 Entidades/                 # Capa de Entidades
-│   └── Modelos de datos (Cliente, Producto, Factura, etc.)
-│
-├── 📁 Recursos Graficos/         # Imágenes y recursos visuales
-├── 📁 RecursosPDF/               # Plantillas y recursos PDF
-├── 📁 Datos/                     # Archivos de datos
-│
-└── 📄 Sistema_Facturacion_0.1.sln # Solución Visual Studio
+| Carpeta / Archivo                 | Descripción                                                      |
+|----------------------------------|------------------------------------------------------------------|
+| **Presentacion_GUI/**             | Capa de Presentación: Interfaz gráfica (Windows Forms)           |
+| **Logica/**                       | Capa de Lógica de Negocio: Reglas de negocio y procesos         |
+| **Datos/**                        | Capa de Acceso a Datos: Conexión y operaciones con BD            |
+| **Entidades/**                    | Capa de Entidades: Modelos de datos (Cliente, Producto, Factura) |
+| **RecursosGraficos/**             | Imágenes y recursos visuales                                      |
+| **RecursosPDF/**                  | Plantillas y recursos PDF                                        |
+| **Datos/**                        | Archivos de datos                                                |
+| **Sistema_Facturacion_0.1.sln**  | Solución Visual Studio                                           |
 
-\`\`\`
+---
 
 ### Descripción de las capas:
 
